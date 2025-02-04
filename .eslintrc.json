@@ -1,0 +1,7 @@
+{
+  "extends": ["eslint:recommended"],
+  "plugins": ["html"],
+  "rules": {
+    "html/indent": ["error", 2]
+  }
+}
