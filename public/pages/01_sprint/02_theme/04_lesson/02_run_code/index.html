@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Управление интерлиньяжем</title>
+    <link rel="stylesheet" href="https://code.s3.yandex.net/web-code/fonts/fonts.css">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/range.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <form class="line-height-way-chooser">
+            <h2>Как задать интерлиньяж?</h2>
+            <label>
+                <input checked type="radio" name="lh" value="pixels" />
+                <span>40 пикселей</span>
+            </label>
+            <label>
+                <input type="radio" name="lh" value="fraction" />
+                <span>В долях</span>
+            </label>
+        </form>
+        <div class="controller">
+            <p>Управляйте размером шрифта и смотрите как меняется высота линии</p>
+            <input type="range" min="0" max="2" step="0.1" />
+        </div>
+        <div class="text-container">
+            <p>Мир придёт</p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

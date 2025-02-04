@@ -1,0 +1,57 @@
+body {
+  min-width: 600px;
+  margin: 0;
+  padding: 20px;
+  background-color: #fff;
+  background-image: url(https://code.s3.yandex.net/web-code/images/dotted-l.svg);
+}
+
+.card {
+  max-width: 500px;
+  margin: auto;
+  border: 1px solid #000;
+  padding: 0 0 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  background-color: white;
+}
+
+.card__image {
+  width: 100%;
+  border-bottom: 1px solid;
+}
+
+.card__title {
+  margin: 20px 0;
+  padding: 0 20px;
+  font-weight: 800;
+  font-size: 38px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* установите межбуквенное расстояние в 2px */
+}
+
+.card__description {
+  margin-bottom: 36px;
+  padding: 0 20px;
+}
+
+.card__description p {
+  margin: 0 0 16px;
+  line-height: 1.8;
+  /* Установите межстрочное расстояние в 1.8 */
+}
+
+.card__more-btn {
+  margin-left: 20px;
+  border: 1px solid #000;
+  padding: 10px 65px;
+  color: #000;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: inherit;
+
+  /* трансформировать текст кнопки нужно здесь */
+  text-transform: uppercase;
+  background-color: #ffc802;
+}

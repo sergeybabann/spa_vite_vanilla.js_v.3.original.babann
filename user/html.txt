@@ -2,3 +2,9 @@
 
 &gt; — вместо >
 
+<span class="text__accent-padding">
+
+<a class="external__link" href="" target="_blank">
+
+
+

@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-width: 600px;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  background-color: #fff;
+  background-image: url(https://code.s3.yandex.net/web-code/images/dotted.svg);
+}
+
+p {
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 500px;
+  min-height: 380px;
+  margin: auto;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+.line-height-way-chooser {
+  border-bottom: 1px solid #000;
+  padding: 20px;
+  color: #fff;
+  background-color: #5f0dee;
+}
+
+.line-height-way-chooser h2 {
+  font-weight: 800;
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.line-height-way-chooser p {
+  margin-bottom: 20px;
+}
+
+.line-height-way-chooser label {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.line-height-way-chooser label:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.line-height-way-chooser input {
+  width: 27px;
+  height: 27px;
+  accent-color: #000;
+}
+
+.controller {
+  padding: 20px;
+}
+
+.controller p {
+  margin-bottom: 20px;
+}
+
+.text-container {
+  padding: 20px;
+}
+
+.text-container p {
+  border-top: 1px dotted #1e1e1e;
+  border-bottom: 1px dotted #1e1e1e;
+  line-height: 40px;
+  text-align: center;
+}

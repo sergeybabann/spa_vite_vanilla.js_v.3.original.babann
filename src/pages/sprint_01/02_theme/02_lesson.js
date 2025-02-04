@@ -1,16 +1,16 @@
-export default async function Lesson_01() {
-  const lesson = document.createElement("div");
-  lesson.classList.add("lesson");
+export default async function Lesson() {
+  const lesson = document.createElement('div')
+  lesson.classList.add('lesson')
 
   try {
     const response = await fetch(
-      "/pages/01_sprint/02_theme/02_lesson/02_lesson.html",
-    );
-    const htmlContent = await response.text();
-    lesson.innerHTML = htmlContent;
+      '/pages/01_sprint/02_theme/02_lesson/02_lesson.html'
+    )
+    const htmlContent = await response.text()
+    lesson.innerHTML = htmlContent
   } catch (error) {
-    console.error("Ошибка загрузки HTML:", error);
+    console.error('Ошибка загрузки HTML:', error)
   }
 
-  return lesson;
+  return lesson
 }

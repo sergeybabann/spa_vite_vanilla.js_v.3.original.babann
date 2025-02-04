@@ -4,10 +4,9 @@ export default async function Lesson() {
 
   try {
     const response = await fetch(
-      '/pages/01_sprint/02_theme/01_lesson/01_lesson.html'
+      '/pages/01_sprint/02_theme/04_lesson/04_lesson.html'
     )
     const htmlContent = await response.text()
-
     lesson.innerHTML = htmlContent
   } catch (error) {
     console.error('Ошибка загрузки HTML:', error)

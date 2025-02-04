@@ -1,0 +1,156 @@
+<!----- Header content ----->
+<div class="header2__content">
+    <div class="header2__wrapper-1">
+        <!----- Bread Crumbs ----->
+        <div class="header2__bread-crumbs">
+            <a href="/sprint_01" class="back-link main__link-default">Спринт 1: Семантика и лэйаут</a>
+            <a href="/sprint_01/theme_02" class="back-link main__link-default">
+                Тема 2: Шрифты и типографика
+            </a>
+        </div><!--bread-crumbs-->
+
+    </div><!--header__wrapper-1-->
+</div><!--header content -->
+
+<!----- MAIN ----->
+<div class="margin__main">
+    <div class="main">
+        <div class="main__wrapper-1">
+            <h1 class="main__title-1">Урок 4. Оформление текста</h1>
+            <p>
+                Превратим текст про рутину из прошлых уроков в красивую карточку предварительного просмотра. И на её
+                примере разберём свойства оформления текста, которые часто нужны на практике. Это ваше первое знакомство
+                с ними, потом они будут то и дело встречаться в вёрстке отдельно друг от друга. На описания всех этих
+                свойств дадим ссылку на Доку, чтобы вы могли детально исследовать все опции.
+            </p>
+
+            <p>
+                Сначала попробуем трансформировать текст. У свойства
+                <span class="text__accent-padding">text-transform</span>
+                <a class="external__link" href="https://doka.guide/css/text-transform/#kak-pishetsya" target="_blank">
+                    много значений</a>. Чаще всего в европейских языках используют:
+            </p>
+
+            <ul>
+                <li><span class="text__accent-padding">uppercase</span> — сделать все буквы заглавными;</li>
+                <li><span class="text__accent-padding">lowercase</span> — сделать все буквы строчными;</li>
+                <li><span class="text__accent-padding">capitalize</span> — все первые буквы в словах сделать заглавными.
+                </li>
+            </ul>
+
+            <p>
+                В примере предлагаем вам выполнить заголовок и текст на кнопке заглавными буквами. Используйте только
+                CSS.
+            </p>
+
+            <!-- 01 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/04_lesson/01_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/04_lesson/01_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Межбуквенные и межстрочные расстояния — настройки типографики, за которыми стоит особо следить в
+                дизайне. Их легко упустить. Но внимательность к деталям — важное качество умелых верстальщиков и
+                верстальщиц.
+            </p>
+
+            <p>
+                Межбуквенное расстояние определяет свойство
+                <span class="text__accent-padding">letter-spacing</span>,
+                а межстрочное — <span class="text__accent-padding">line-height</span>. У обоих свойств
+                значение по умолчанию <span class="text__accent-padding">normal</span>, а переопределять
+                значения можно в разных единицах измерения. Все подробности и детали можно найти
+                <a class="external__link" href="https://doka.guide/css/letter-spacing/" target="_blank">здесь</a>
+                и ещё <a class="external__link" href="https://doka.guide/css/line-height/" target="_blank">вот тут</a>.
+            </p>
+
+            <p>
+                В нашем примере необходимо задать межбуквенное расстояние в пикселях, а межстрочное — в относительной
+                доле. Относительная доля считается так: размер шрифта считают за единицу. Тогда 1.5 — в половину больше
+                размера шрифта, а 0.5 — половина размера.
+            </p>
+
+            <p>
+                Межстрочное расстояние стоит задавать в относительных долях, чтобы изменение размера шрифта влияло на
+                интерлиньяж.
+            </p>
+
+            <p>
+                Чтобы оценить удобство такого подхода, используйте виджет. Сначала задайте межстрочное расстояние в
+                пикселях и измените размер шрифта. Затем повторите тот же эксперимент с межстрочным расстоянием,
+                заданным в долях.
+            </p>
+
+            <!-- 02 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/04_lesson/02_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/04_lesson/02_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Когда интерлиньяж зафиксирован в пикселях, изменение размера шрифта может привести к тому, что между
+                строками появится слишком много пространства или они наоборот схлопнутся. Относительные доли
+                гарантируют, что расстояние между строками будет комфортным для чтения вне зависимости от размера
+                шрифта.
+            </p>
+
+            <p>
+                Теперь вы с полным пониманием можете улучшить карточку статьи. Задайте межбуквенное и межстрочное
+                расстояния. Подробности в комментариях:
+            </p>
+
+            <!-- 03 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/04_lesson/03_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/04_lesson/03_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Если присмотреться, это даже не кнопка, а ссылка, замаскированная под кнопку. Такое бывает, это
+                нормально: если функциональность предполагает переход на новую страницу, используют ссылки, если нет —
+                кнопки. Ссылки по умолчанию подчёркивает браузер. Поменять такое поведение можно свойством<br>
+                <span class="text__accent-padding">text-decoration</span>.
+            </p>
+
+            <p>
+                Вариантов оформления <a class="external__link" href="https://doka.guide/css/text-decoration/"
+                    target="_blank">несколько</a>,
+                а чаще всего используются:
+            </p>
+
+
+            <ul>
+                <li><span class="text__accent-padding">none</span> — отменяет любое оформление;</li>
+                <li><span class="text__accent-padding">underline</span> — применяет нижнее подчёркивание.</li>
+            </ul>
+
+            <p>
+                Часто для ссылок отменяют подчёркивание и придумывают какое-либо альтернативное оформление. Так мы и
+                поступим: отменим подчёркивание у ссылки, которая маскируется под кнопку, а у ссылок в тексте вместо
+                подчёркивания будем использовать оформление нижней границы.
+            </p>
+
+            <!-- 04 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/04_lesson/04_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/04_lesson/04_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+
+
+
+
+
+
+        </div><!--main__wrapper-1-->
+    </div><!--main-->
+</div><!--margin__main-->
