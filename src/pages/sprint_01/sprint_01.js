@@ -1,7 +1,7 @@
 export default function Sprint_01() {
-    const sprint_01 = document.createElement('sprint_01');
-    sprint_01.classList.add('sprint_01');
-    sprint_01.innerHTML = `
+  const sprint_01 = document.createElement('sprint_01')
+  sprint_01.classList.add('sprint_01')
+  sprint_01.innerHTML = `
     <div class="header__content">
             <div class="header__wrapper-1">
             <h1>Yandex Practicum</h1>
@@ -33,7 +33,7 @@ export default function Sprint_01() {
         <ul class="main__list-1">
             <li class="main__list-1-item"><a href="/sprint_01/theme_01" class="main__link-default">1. Интро в Спринт</a></li> 
             <li class="main__list-1-item"><a href="/sprint_01/theme_02" class="main__link-default">2. Шрифты и типографика</a></li>  
-            <li class="main__list-1-item"><a href="/sprint_01/theme_03" class="main__link-default">ITEM</a></li>
+            <li class="main__list-1-item"><a href="/sprint_01/theme_03" class="main__link-default">3. Почему вы выбрали Практикум</a></li>
             <li class="main__list-1-item"><a href="/sprint_01/theme_04" class="main__link-default">ITEM</a></li>
             <li class="main__list-1-item"><a href="/sprint_01/theme_05" class="main__link-default">ITEM</a></li>
             <li class="main__list-1-item"><a href="/sprint_01/theme_06" class="main__link-default">ITEM</a></li>
@@ -67,11 +67,8 @@ export default function Sprint_01() {
                 </ul>
             </div>
         
-    `;
-    return sprint_01;
+    `
+  return sprint_01
 }
-
-
-
 
 // console.log('About Page Script Loaded');
