@@ -23,6 +23,9 @@ const routes = {
 
   '/sprint_01/theme_02/lesson_04': () =>
     import('../pages/sprint_01/02_theme/04_lesson.js'),
+
+  '/sprint_01/theme_02/lesson_05': () =>
+    import('../pages/sprint_01/02_theme/05_lesson.js'),
 }
 
 const loadRoute = async (path) => {

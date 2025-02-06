@@ -1,0 +1,187 @@
+<!----- Header content ----->
+<div class="header2__content">
+    <div class="header2__wrapper-1">
+        <!----- Bread Crumbs ----->
+        <div class="header2__bread-crumbs">
+            <a href="/sprint_01" class="back-link main__link-default">Спринт 1: Семантика и лэйаут</a>
+            <a href="/sprint_01/theme_02" class="back-link main__link-default">
+                Тема 2: Шрифты и типографика
+            </a>
+        </div><!--bread-crumbs-->
+
+    </div><!--header__wrapper-1-->
+</div><!--header content -->
+
+<!----- MAIN ----->
+<div class="margin__main">
+    <div class="main">
+        <div class="main__wrapper-1">
+            <h1 class="main__title-1">Урок 5. Переполнение текстовых блоков</h1>
+            <p>
+                В дизайне часто приходится искать решения в ситуациях, когда что-то не помещается в своего родителя. Это
+                происходит, когда по тем или иным причинам родителю нужно ограничить размеры. Вернёмся к карточке
+                предпросмотра текста — типовому элементу разных сайтов.
+            </p>
+
+            <img src="/images/01_sprint/02_theme/05_lesson/01_image.png" alt="">
+
+            <p>
+                Текста значительно больше, чем предполагает дизайн. Вместо переноса текста на следующие строки он
+                обрезается, а в конце появляется многоточие.
+            </p>
+
+            <p>
+                Сначала добьёмся переполнения блока. Само собой это не произойдёт, ведь текст, не вмещаясь в какую-то
+                ширину, начинает переноситься по пробелам. При отсутствии фиксированной высоты у родителя переполнения
+                тоже не происходит, ведь блок растягивается по высоте.
+            </p>
+
+            <p>
+                Способом обработки пробелов в тексте можно управлять свойством
+                <span class="text__accent-padding">white-space</span>. Если задать значение
+                <span class="text__accent-padding">nowrap</span>,
+                текст перестанет переноситься по пробелам совсем. Иногда такое поведение полезно задавать заголовкам
+                или, как в нашем случае, текстам в зонах предварительного просмотра.
+            </p>
+
+            <p>
+                У <span class="text__accent-padding">white-space</span> есть и
+                <a class="external__link" href="https://doka.guide/css/white-space/" target="_blank">
+                    другие значения</a>, второе по популярности после <span class="text__accent-padding">nowrap</span> —
+                <span class="text__accent-padding">pre</span>. Это значение используют для форматирования кода.
+            </p>
+
+            <p>
+                В заготовке сделайте так, чтобы абзац перестал переноситься по пробелам. Вы увидите, что в блок не
+                вмещается вся строка, потому что у карточки фиксированная ширина.
+            </p>
+
+            <!-- 01 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/05_lesson/01_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/05_lesson/01_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Поведением блока при переполнении управляет свойство
+                <span class="text__accent-padding">overflow</span>. Это свойство контейнера, а не текстового
+                элемента. Мы ещё вернёмся к нему, когда будем говорить о переполнении контейнеров. Но сейчас
+                без него не получится выполнить задумку.
+            </p>
+
+            <p>
+                Свойство <span class="text__accent-padding">overflow</span> назначается родительскому элементу, в
+                который не помещается содержимое. Это содержимое
+                можно скрыть значением <span class="text__accent-padding">hidden</span> или убрать за скроллбар
+                значением <span class="text__accent-padding">scroll</span>. Подробнее про все режимы
+                прочитайте в <a class="external__link" href="https://doka.guide/css/overflow/#znacheniya"
+                    target="_blank">Доке</a>, а два упомянутых попробуйте на
+                примере.
+            </p>
+
+            <!-- 02 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/05_lesson/02_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/05_lesson/02_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Да, есть ещё многоточие. Его при переполнении задают свойством
+                <span class="text__accent-padding">text-overflow</span>. У свойства всего два значения:
+            </p>
+
+            <ul>
+                <li><span class="text__accent-padding">clip</span> — текст просто обрежется по краю;</li>
+                <li><span class="text__accent-padding">ellipsis</span> — появится многоточие.</li>
+            </ul>
+
+            <p>
+                Особенность в том, что свойство работает только в комбинации с
+                <span class="text__accent-padding">overflow</span> и
+                <span class="text__accent-padding">white-space: nowrap</span>.
+                Если их не будет у элемента, <span class="text__accent-padding">text-overflow</span>
+                не сработает. Немного больше подробностей читайте в
+                <a class="external__link" href="https://doka.guide/css/text-overflow/" target="_blank">Доке</a>, а в
+                примере ниже примените
+                <span class="text__accent-padding">text-overflow</span> и добейтесь ожидаемого результата.
+            </p>
+
+            <!-- 03 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/05_lesson/03_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/05_lesson/03_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Предыдущее упражнение с проставлением многоточия в тексте — не самая частая задача верстальщика. Но её
+                стоит проделать хоть раз, чтобы в нужный момент вспомнить о существовании подходящих свойств перед
+                поиском в документации. К таким же задачам относится управление переносом длинных слов, которые не
+                вмещаются в родительский блок.
+            </p>
+
+            <p>
+                Например, в Уэльсе есть деревня под названием
+                <span class="text__accent-padding">Лланвайрпуллгуингиллгогерихуирндробуллллантисилиогогого́х</span>,
+                а в Новой Зеландии — холм
+                <span
+                    class="text__accent-padding">Тауматафакатангихангакоауауотаматеатурипукакапикимаунгахоронукупокаифенуакитанатаху</span>.
+                Вот что произойдёт, если попытаться вместить их в контейнер с неподходящей шириной:
+            </p>
+
+            <!-- 04 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/05_lesson/04_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/05_lesson/04_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Для управления переносом таких слов есть два похожих друг на друга свойства.
+            </p>
+
+            <p>
+                Сначала было свойство <span class="text__accent-padding">word-wrap</span>
+                со значениями <span class="text__accent-padding">normal</span> и
+                <span class="text__accent-padding">break-word</span>. Но оно не было добавлено в
+                спецификацию CSS. Поэтому браузеры сами придумывали, как это свойство будет работать.
+            </p>
+
+            <p>
+                Когда проблему отсутствия стандарта осознали, решили внедрить другое свойство, которое управляет
+                переносом букв — <span class="text__accent-padding">overflow-wrap</span>. У него добавилось
+                одно значение,
+                <a class="external__link" href="https://doka.guide/css/overflow-wrap/" target="_blank">
+                    прочитайте о нём</a>.
+                Так или иначе, самая типовая задача с переносом букв теперь
+                решается стандартом <span class="text__accent-padding">overflow-wrap: break-word;</span>.
+                Примените это свойство к длинным географическим названиям и посмотрите на результат.
+            </p>
+
+            <!-- 05 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/05_lesson/05_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/02_theme/05_lesson/05_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                На самом деле ещё очень много всего... Можно создать отдельный курс про работу с текстом, но нам пора
+                двигаться дальше. Вам стоит ещё поискать в интернете и самим разобраться с HTML-мнемониками,
+                свойством <span class="text__accent-padding">hyphens</span>, тегами переноса строк, акцентирования и
+                форматирования текста. Тонкости познаются в процессе работы и в тренажёре.
+            </p>
+
+
+
+
+        </div><!--main__wrapper-1-->
+    </div><!--main-->
+</div><!--margin__main-->

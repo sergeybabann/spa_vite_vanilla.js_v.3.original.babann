@@ -1,0 +1,8 @@
+p {
+  width: 300px;
+  border: 1px solid pink;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  overflow-wrap: break-word;
+  /* Примените правило переноса букв */
+}
