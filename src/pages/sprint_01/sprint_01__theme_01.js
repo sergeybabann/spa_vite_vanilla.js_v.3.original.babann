@@ -1,7 +1,7 @@
 export default function Sprint_01_Theme_01() {
-    const theme = document.createElement('theme');
-    theme.classList.add('theme');
-    theme.innerHTML = `
+  const theme = document.createElement('theme')
+  theme.classList.add('theme')
+  theme.innerHTML = `
 
 <div class="header2__content">
 <div class="header2__wrapper-1">
@@ -30,6 +30,6 @@ export default function Sprint_01_Theme_01() {
         </div><!--main__wrapper-1-->
         </div><!--main-->
         </div><!--margin__main
-    `;
-    return theme;
+    `
+  return theme
 }

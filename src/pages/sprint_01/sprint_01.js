@@ -4,8 +4,8 @@ export default function Sprint_01() {
   sprint_01.innerHTML = `
     <div class="header__content">
             <div class="header__wrapper-1">
-            <h1>Yandex Practicum</h1>
-            <h2>Sprint 01</h2>
+            <h1 class="header__title-1">Яндекс Практикум</h1>
+            <h2 class="header__title-2">Спринт 1</h2>
             </div><!--header__wrapper-1-->
             
             <!-- Menu Navigation -->
@@ -15,13 +15,13 @@ export default function Sprint_01() {
                     <a class="header__menu-link" href="/">Home</a>
                 </li>
                 <li class="header__menu-item">
-                    <a class="header__menu-link" href="/sprint_01">Sprint 01</a>
+                    <a class="header__menu-link" href="/sprint_01">Спринт 1</a>
                 </li>
                 <li class="header__menu-item">
-                    <a class="header__menu-link" href="/sprint_02">Sprint 02</a>
+                    <a class="header__menu-link" href="/sprint_02">Спринт 2</a>
                 </li>
                 <li class="header__menu-item">
-                    <a class="header__menu-link" href="/sprint_03">Sprint 03</a>
+                    <a class="header__menu-link" href="/sprint_03">Спринт 3</a>
                 </li>                         
                 </ul>
             </div><!--header__menu-->
@@ -34,11 +34,6 @@ export default function Sprint_01() {
             <li class="main__list-1-item"><a href="/sprint_01/theme_01" class="main__link-default">1. Интро в Спринт</a></li> 
             <li class="main__list-1-item"><a href="/sprint_01/theme_02" class="main__link-default">2. Шрифты и типографика</a></li>  
             <li class="main__list-1-item"><a href="/sprint_01/theme_03" class="main__link-default">3. Почему вы выбрали Практикум</a></li>
-            <li class="main__list-1-item"><a href="/sprint_01/theme_04" class="main__link-default">ITEM</a></li>
-            <li class="main__list-1-item"><a href="/sprint_01/theme_05" class="main__link-default">ITEM</a></li>
-            <li class="main__list-1-item"><a href="/sprint_01/theme_06" class="main__link-default">ITEM</a></li>
-            <li class="main__list-1-item"><a href="/sprint_01/theme_07" class="main__link-default">ITEM</a></li>
-            <li class="main__list-1-item"><a href="/sprint_01/theme_08" class="main__link-default">ITEM</a></li>        
         </ul>
     </div>
             

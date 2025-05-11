@@ -1,7 +1,7 @@
 export default function Home() {
-    const home = document.createElement('home');
-    home.classList.add('home');
-    home.innerHTML = `
+  const home = document.createElement('home')
+  home.classList.add('home')
+  home.innerHTML = `
         <div class="header__content">
             <div class="header__wrapper-1">
             <h1>Yandex Practicum</h1>
@@ -38,8 +38,8 @@ export default function Home() {
                 </ul>
             </div>
         </div>
-    `;
-    return home;
+    `
+  return home
 }
 
 // console.log('Home Page Script Loaded');

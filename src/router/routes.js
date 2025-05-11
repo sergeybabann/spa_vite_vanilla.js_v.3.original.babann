@@ -1,7 +1,7 @@
 const routes = {
   '/': () => import('../pages/home/Home.js'),
 
-  /*---------- 01 SPRINT ----------*/
+  /*-------------------- 01 SPRINT --------------------*/
   '/sprint_01': () => import('../pages/sprint_01/sprint_01.js'),
 
   /*----- 01 THEME -----*/
@@ -36,6 +36,12 @@ const routes = {
   /*----- 03 THEME -----*/
   '/sprint_01/theme_03/lesson_01': () =>
     import('../pages/sprint_01/03_theme/01_lesson.js'),
+
+  /*-------------------- 02 SPRINT --------------------*/
+  '/sprint_02': () => import('../pages/sprint_02/sprint_02.js'),
+
+  /*-------------------- 03 SPRINT --------------------*/
+  '/sprint_03': () => import('../pages/sprint_03/sprint_03.js'),
 }
 
 const loadRoute = async (path) => {

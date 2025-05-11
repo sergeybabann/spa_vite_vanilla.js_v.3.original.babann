@@ -1,6 +1,6 @@
 export default function Sprint_01_Theme_02() {
-  const lesson = document.createElement("lesson");
-  lesson.classList.add("lesson");
+  const lesson = document.createElement('lesson')
+  lesson.classList.add('lesson')
   lesson.innerHTML = `
         <div class="header2__content">
 <div class="header2__wrapper-1">
@@ -42,6 +42,6 @@ export default function Sprint_01_Theme_02() {
         </div><!--main__wrapper-1-->
         </div><!--main-->
         </div><!--margin__main-->
-    `;
-  return lesson;
+    `
+  return lesson
 }
