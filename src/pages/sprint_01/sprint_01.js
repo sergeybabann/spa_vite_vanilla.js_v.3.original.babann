@@ -34,34 +34,20 @@ export default function Sprint_01() {
             <li class="main__list-1-item"><a href="/sprint_01/theme_01" class="main__link-default">1. Интро в Спринт</a></li> 
             <li class="main__list-1-item"><a href="/sprint_01/theme_02" class="main__link-default">2. Шрифты и типографика</a></li>  
             <li class="main__list-1-item"><a href="/sprint_01/theme_03" class="main__link-default">3. Почему вы выбрали Практикум</a></li>
+            <li class="main__list-1-item"><a href="/sprint_01/theme_04" class="main__link-default">4. Семантика</li>
+            <li class="main__list-1-item"><a href="/sprint_01/theme_05" class="main__link-default">5. Глобальные атрибуты</li>
+            <li class="main__list-1-item"><a href="/sprint_01/theme_06" class="main__link-default">6. Флексбокс-верстка</li>
+            <li class="main__list-1-item"><a href="/sprint_01/theme_07" class="main__link-default">7. Расскажите про ваше обучение</li>
+            <li class="main__list-1-item"><a href="/sprint_01/theme_08" class="main__link-default">8. Готовый кейс: "С чистого листа"</li>
+            <li class="main__list-1-item"><a href="/sprint_01/theme_09" class="main__link-default">9. Позиционирование элементов</li>
+            <li class="main__list-1-item"><a href="/sprint_01/theme_10" class="main__link-default">10. Grid layout, часть 1</li>
+            <li class="main__list-1-item"><a href="/sprint_01/theme_11" class="main__link-default">11. Дополнительные статьи</li>
+            <li class="main__list-1-item"><a href="/sprint_01/theme_12" class="main__link-default">12. Bash и Git. Основы</li>
+            <li class="main__list-1-item"><a href="/sprint_01/theme_13" class="main__link-default">13. Проект 1: "Оно тебе надо"</li>
+            <li class="main__list-1-item"><a href="/sprint_01/theme_14" class="main__link-default">14. Сдача проектной работы "Оно тебе надо"</li>
+            <li class="main__list-1-item"><a href="/sprint_01/theme_15" class="main__link-default">15. Обратная связь по спринту.</li>
         </ul>
-    </div>
-            
-            <!----- SIDEBAR2 ----->
-            <div class="sidebar2">
-                <div class="sidebar2__title">
-                    1 спринт: Семантика и лэйаут 
-                </div>
-                
-                <ul class="sidebar2__list">
-                    <li class="sidebar2__item"><a class="sidebar2__link">1. Интро в спринт</a></li>
-                    <li class="sidebar2__item"><a class="sidebar2__link">2. Шрифты и типографика</a></li>
-                    <li class="sidebar2__item"><a class="sidebar2__link">3. Почему вы выбрали практикум</a></li>
-                    <li class="sidebar2__item"><a class="sidebar2__link">4. Семантика</a></li>
-                    <li class="sidebar2__item"><a class="sidebar2__link">5. Глобальные атрибуты</a></li>
-                    <li class="sidebar2__item"><a class="sidebar2__link">6. Флексбокс-верстка</a></li>
-                    <li class="sidebar2__item"><a class="sidebar2__link">7. Расскажите про ваше обучение</a></li>
-                    <li class="sidebar2__item"><a class="sidebar2__link">8. Готовый кейс: "С чистого листа"</a></li>
-                    <li class="sidebar2__item"><a class="sidebar2__link">9. Позиционирование элементов</a></li>
-                    <li class="sidebar2__item"><a class="sidebar2__link">10. Grid layout, часть 1</a></li>
-                    <li class="sidebar2__item"><a class="sidebar2__link">11. Дополнительные статьи</a></li>
-                    <li class="sidebar2__item"><a class="sidebar2__link">12. Bash и Git. Основы</a></li>
-                    <li class="sidebar2__item"><a class="sidebar2__link">13. Проект 1: "Оно тебе надо"</a></li>
-                    <li class="sidebar2__item"><a class="sidebar2__link">14. Сдача проектной работы "Оно тебе надо"</a></li>
-                    <li class="sidebar2__item"><a class="sidebar2__link">15. Обратная связь по спринту.</a></li>
-                </ul>
-            </div>
-        
+    </div>  
     `
   return sprint_01
 }

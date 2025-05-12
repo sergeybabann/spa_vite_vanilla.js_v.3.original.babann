@@ -5,7 +5,7 @@ export default function Sprint_03() {
     <div class="header__content">
             <div class="header__wrapper-1">
             <h1 class="header__title-1">Яндекс Практикум</h1>
-            <h2 class="header__title-2">Спринт 2</h2>
+            <h2 class="header__title-2">Спринт 3</h2>
             </div><!--header__wrapper-1-->
             
             <!-- Menu Navigation -->

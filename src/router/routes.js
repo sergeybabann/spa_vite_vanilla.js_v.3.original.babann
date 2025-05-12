@@ -4,7 +4,7 @@ const routes = {
   /*-------------------- 01 SPRINT --------------------*/
   '/sprint_01': () => import('../pages/sprint_01/sprint_01.js'),
 
-  /*----- 01 THEME -----*/
+  /*---------- THEMES ----------*/
   '/sprint_01/theme_01': () =>
     import('../pages/sprint_01/sprint_01__theme_01.js'),
 
@@ -14,10 +14,14 @@ const routes = {
   '/sprint_01/theme_03': () =>
     import('../pages/sprint_01/sprint_01__theme_03.js'),
 
+  '/sprint_01/theme_04': () =>
+    import('../pages/sprint_01/sprint_01__theme_04.js'),
+
+  /*---------- LESSONS ----------*/
   '/sprint_01/theme_01/lesson_01': () =>
     import('../pages/sprint_01/01_theme/01_lesson.js'),
 
-  /*----- 02 THEME -----*/
+  /*-- 01 sprint --- 02 THEME -----*/
   '/sprint_01/theme_02/lesson_01': () =>
     import('../pages/sprint_01/02_theme/01_lesson.js'),
 
@@ -33,9 +37,13 @@ const routes = {
   '/sprint_01/theme_02/lesson_05': () =>
     import('../pages/sprint_01/02_theme/05_lesson.js'),
 
-  /*----- 03 THEME -----*/
+  /*-- 01 sprint --- 03 THEME -----*/
   '/sprint_01/theme_03/lesson_01': () =>
     import('../pages/sprint_01/03_theme/01_lesson.js'),
+
+  /*-- 01 sprint --- 04 THEME -----*/
+  '/sprint_01/theme_04/lesson_01': () =>
+    import('../pages/sprint_01/04_theme/01_lesson.js'),
 
   /*-------------------- 02 SPRINT --------------------*/
   '/sprint_02': () => import('../pages/sprint_02/sprint_02.js'),

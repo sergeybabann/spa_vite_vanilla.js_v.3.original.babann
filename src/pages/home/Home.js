@@ -4,7 +4,7 @@ export default function Home() {
   home.innerHTML = `
         <div class="header__content">
             <div class="header__wrapper-1">
-            <h1>Yandex Practicum</h1>
+            <h1>Яндекс практикум</h1>
             <h2>Home</h2>
             </div><!--header__wrapper-1-->
             
@@ -15,13 +15,13 @@ export default function Home() {
                     <a class="header__menu-link" href="/">Home</a>
                 </li>
                 <li class="header__menu-item">
-                    <a class="header__menu-link" href="/sprint_01">Sprint 01</a>
+                    <a class="header__menu-link" href="/sprint_01">Спринт 1</a>
                 </li>
                 <li class="header__menu-item">
-                    <a class="header__menu-link" href="/sprint_02">Sprint 02</a>
+                    <a class="header__menu-link" href="/sprint_02">Спринт 2</a>
                 </li>
                 <li class="header__menu-item">
-                    <a class="header__menu-link" href="/sprint_03">Sprint 03</a>
+                    <a class="header__menu-link" href="/sprint_03">Спринт 3</a>
                 </li>                         
                 </ul>
             </div>

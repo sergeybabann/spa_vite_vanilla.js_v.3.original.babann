@@ -1,10 +1,10 @@
-import { defineConfig } from "vite";
-import { resolve } from "path";
+import { defineConfig } from 'vite'
+import { resolve } from 'path'
 
 export default defineConfig({
-  root: "./", // Указывает корневую директорию проекта
+  root: './', // Указывает корневую директорию проекта
 
-  publicDir: "public", // Указывает, что папка public содержит статические файлы
+  publicDir: 'public', // Указывает, что папка public содержит статические файлы
 
   server: {
     open: true, // Автоматически открывать браузер
@@ -19,17 +19,28 @@ export default defineConfig({
 
   build: {
     rollupOptions: {
-      input: resolve(__dirname, "index.html"), // Укажите основной файл входа для SPA
+      input: resolve(__dirname, 'index.html'), // Укажите основной файл входа для SPA
     },
   },
 
   middlewareMode: true,
   configureServer: (server) => {
     server.middlewares.use((req, res, next) => {
-      if (req.url.startsWith("/pages/")) {
-        return next(); // Пропускаем запрос
+      if (req.url.startsWith('/pages/')) {
+        return next() // Пропускаем запрос
       }
-      next();
-    });
+      next()
+    })
   },
-});
+
+  plugins: [
+    {
+      name: 'html-auto-reload',
+      handleHotUpdate({ file, server }) {
+        if (file.endsWith('.html')) {
+          server.ws.send({ type: 'full-reload' })
+        }
+      },
+    },
+  ],
+})
