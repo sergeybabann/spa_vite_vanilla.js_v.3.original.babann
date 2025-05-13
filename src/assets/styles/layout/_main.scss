@@ -126,8 +126,9 @@
   padding: $text-accent-padding;
   border: $border-light-mute;
   border-radius: 3px;
-  font-size: 22px;
+  font-size: 14px;
   margin: 0 5px 0 5px;
+  background-color: $bg-dark-accent;
 }
 
 .code__example-block {
