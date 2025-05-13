@@ -65,6 +65,9 @@ const routes = {
   '/sprint_01/theme_05/lesson_01': () =>
     import('../pages/sprint_01/05_theme/01_lesson.js'),
 
+  '/sprint_01/theme_05/lesson_02': () =>
+    import('../pages/sprint_01/05_theme/02_lesson.js'),
+
   /*-------------------- 02 SPRINT --------------------*/
   '/sprint_02': () => import('../pages/sprint_02/sprint_02.js'),
 
