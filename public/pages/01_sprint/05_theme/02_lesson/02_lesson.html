@@ -15,39 +15,188 @@
     <div class="main">
         <div class="main__wrapper-1">
             <h1 class="main__title-1">Урок 2. Идентификаторы</h1>
-            <p>
 
+            <p>
+                Частая ситуация: нужно, чтобы пользователь кликнул на ссылку или кнопку, и страница прокрутилась до
+                соответствующего блока. Такая навигация делается при помощи так называемых якорных ссылок. Они ссылаются
+                на конкретный элемент на странице. Этот элемент может находиться как на текущей, так и на любой другой
+                странице сайта.
             </p>
 
-
-
-
+            <p>
+                Допустим, у нас есть простая посадочная страница. В верхнем меню три пункта, по клику на которые
+                страница должна прокручиваться к нужному блоку. Пока что ссылки не работают.
+            </p>
 
             <!-- 01 RUN CODE -->
             <div class="run__code-block">
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code/index.html"
+                <a class="run__code-link" href="/pages/01_sprint/05_theme/02_lesson/01_run_code/index.html"
                     target="_blank" rel="noopener noreferrer">Запустить код</a>
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code.zip" download>скачать
+                <a class="run__code-link" href="/pages/01_sprint/05_theme/02_lesson/01_run_code.zip" download>скачать
                     блок кода</a>
             </div>
+
+            <p>
+                Для установки якорной ссылки необходимо указать HTML-элемент, на который она ведёт. В нашем случае нужно
+                указать на секции — большие логические блоки, обёрнутые в
+                <span class="text__accent-padding">section</span>.
+            </p>
+
+            <p>
+                Использовать имя тега или имя класса не выйдет. Имена могут повторяться, прокрутка не будет работать
+                правильно. Нам же нужна уникальная метка элемента. Ею станет идентификатор.
+            </p>
+
+            <p>
+                Идентификатор элемента задаётся атрибутом <span class="text__accent-padding">id</span> .
+                Идентификатор элементу присваивает разработчик. Значение <span class="text__accent-padding">id</span>
+                должно быть уникальным в пределах одной страницы.
+            </p>
+
+            <p>
+                Придумывая идентификатор, соблюдайте три правила, чтобы код был читаемым и для людей, и для роботов:
+            </p>
+
+            <ul>
+                <li>не начинайте <span class="text__accent-padding">id</span> с цифр или спецсимволов;</li>
+                <li>если в названии несколько слов, разделяйте их дефисами или нижними подчёркиваниями вместо пробелов;
+                </li>
+                <li>подбирайте простые слова из английского языка.</li>
+            </ul>
+
+            <p>
+                Соблюдайте эти правила, и ваш код будет понятен любому.
+            </p>
+
+            <p>
+                Например, блоку «О нас» можно задать идентификатор <span class="text__accent-padding">about</span>.
+                Вот как это будет выглядеть в коде:
+            </p>
 
             <!---------- DEMO CODE ---------->
             <pre class="code__example-block">
                 <code>
-                код
+                &lt;section class="section about" id="about"&gt;
                 </code>
             </pre>
 
-            <!---------- VIDEO ---------->
-            <video width="640" height="360" controls>
-                <source src="/video/01_sprint/04_theme/01_lesson/Скринридер_1.mp4" type="video/mp4">
-            </video>
+            <p>
+                Пропишите в коде ниже уникальные идентификаторы всем секциям, кроме входного экрана с классом
+                <span class="text__accent-padding">cover</span>.
+                Используйте вторые классы у секций в качестве значения для атрибута <span
+                    class="text__accent-padding">id</span>.
+            </p>
 
-            <!---------- IMAGE ---------->
-            <img src="/images/01_sprint/01_theme/01_lesson/01_image.png" alt="">
+            <!-- 02 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/05_theme/02_lesson/02_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/05_theme/02_lesson/02_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
 
+            <p>
+                Мы прописали идентификаторы для элементов, но пока не ссылаемся на них. Поэтому и навигация не работает.
+                Сейчас это исправим.
+            </p>
 
+            <p>
+                Если якорная ссылка и элемент, на который она ссылается, находятся на одной странице, то в качестве
+                адреса ссылки нужно прописать хеш — символ «решётка»,
+                <span class="text__accent-padding">#</span>, — а затем имя идентификатора без пробела:
+            </p>
 
+            <!---------- DEMO CODE ---------->
+            <pre class="code__example-block">
+                <code>
+                &lt;a href="#about">Что это&lt;/a&gt;
+                </code>
+            </pre>
+
+            <p>
+                Чтобы сослаться на элемент с любой другой страницы, нужно указать полный адрес страницы, на которой
+                находится объект, а после — хеш и идентификатор элемента. Пока просто примите это к сведению.
+            </p>
+
+            <!---------- DEMO CODE ---------->
+            <pre class="code__example-block">
+                <code>
+        &lt;a href="https://atychiphobia.com/article#part-11"&gt;Якорная ссылка с другой страницы&lt;/a&gt;
+                </code>
+            </pre>
+
+            <p>
+                При переходе на <a class="external__link"
+                    href="https://www.w3.org/TR/html401/struct/links.html#h-12.2.3" target="_blank">страницу с
+                    официальным описанием якорных ссылок на W3.org</a> вы увидите, что страница автоматически
+                прокрутится вниз. Эта якорная ссылка ведёт на элемент c
+                <span class="text__accent-padding">id=" h-12.2.3"</span> ,
+                который расположен примерно в середине страницы. Адрес ссылки выглядит так:
+            </p>
+
+            <p>
+                <span class="text__accent-padding"><a class="external__link"
+                        href="https://www.w3.org/TR/html401/struct/links.html#h-12.2.3"
+                        target="_blank">https://www.w3.org/TR/html401/struct/links.html#h-12.2.3.</a></span>
+            </p>
+
+            <p>
+                В коде ниже для ссылок в меню укажите значения атрибута <span class="text__accent-padding">href</span>
+                так, чтобы они указывали на нужные разделы.
+                Нажмите на ссылки и убедитесь, что страница прокручивается правильно.
+            </p>
+
+            <!-- 03 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/05_theme/02_lesson/03_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/05_theme/02_lesson/03_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Сейчас страница прыгает к нужной секции резко. Хотелось бы добавить плавности.
+            </p>
+
+            <p>
+                Раньше для этого использовали JavaScript-код, но теперь можно добавить плавность перехода одним
+                свойством <span class="text__accent-padding">scroll-behavior</span> со значением
+                <span class="text__accent-padding">smooth</span>. Однако с ним есть одна маленькая особенность. Если мы
+                хотим, чтобы плавный скролл работал на всей странице, то свойство нужно прописать для селектора
+                <span class="text__accent-padding">html</span>.
+                Если указать его для <span class="text__accent-padding">body</span>, то это не сработает.
+            </p>
+
+            <p>
+                Задайте свойство плавного скролла для нашего лендинга:
+            </p>
+
+            <!-- 04 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/05_theme/02_lesson/04_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/05_theme/02_lesson/04_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                В CSS-селекторе перед названием идентификатора ставится хеш:
+            </p>
+
+            <!---------- DEMO CODE ---------->
+            <pre class="code__example-block">
+                <code>
+        #part-11 {
+            color: #ff0000;
+        }
+                </code>
+            </pre>
+
+            <p>
+                Но верстальщики стараются не использовать идентификаторы в CSS, потому что правила, заданные по такому
+                селектору, трудно переопределить — они слишком сильные. Подробнее об этом поговорим в теме про
+                специфичность.
+            </p>
         </div><!--main__wrapper-1-->
     </div><!--main-->
 </div><!--margin__main-->
