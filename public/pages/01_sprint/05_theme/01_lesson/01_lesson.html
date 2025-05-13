@@ -15,38 +15,66 @@
     <div class="main">
         <div class="main__wrapper-1">
             <h1 class="main__title-1">Урок 1. Язык документа и его элементов</h1>
-            <p>
 
+            <p>
+                При создании сайта важно указывать, на каком он языке. Это поднимет шансы сайта оказаться выше в
+                результатах поиска. А современные браузеры предложат автоматически перевести страницу, если она написана
+                на языке, который для пользователя — иностранный.
             </p>
 
-
-
-
-
-            <!-- 01 RUN CODE -->
-            <div class="run__code-block">
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code/index.html"
-                    target="_blank" rel="noopener noreferrer">Запустить код</a>
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code.zip" download>скачать
-                    блок кода</a>
-            </div>
+            <p>
+                Язык документа указывают в атрибуте <span class="text__accent-padding">lang</span> тега<span
+                    class="text__accent-padding">html</span>. Значение этого атрибута — двухбуквенный код языка.
+                Например, для русского — это <span class="text__accent-padding">ru:</span>
+            </p>
 
             <!---------- DEMO CODE ---------->
             <pre class="code__example-block">
                 <code>
-                код
+                &lt;html lang="ru"&gt;
                 </code>
             </pre>
 
-            <!---------- VIDEO ---------->
-            <video width="640" height="360" controls>
-                <source src="/video/01_sprint/04_theme/01_lesson/Скринридер_1.mp4" type="video/mp4">
-            </video>
+            <p>
+                Языковые коды определены почти для каждого из языков. Стандарты определяет <a class="external__link"
+                    href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
+                    target="_blank">Администрация адресного пространства интернет (IANA).</a>
+            </p>
 
-            <!---------- IMAGE ---------->
-            <img src="/images/01_sprint/01_theme/01_lesson/01_image.png" alt="">
+            <p>
+                Кроме того, некоторые скринридеры будут ориентироваться на указанный язык при выборе голоса для
+                произношения текста.
+            </p>
 
+            <p>
+                Атрибут <span class="text__accent-padding">lang</span> универсальный. Им мы можем определить язык
+                отдельных блоков. Если текст одного из HTML-элементов написан на языке, который отличается от основного
+                языка страницы, то следует отметить это в открывающем теге. Поисковые машины благосклонны к ресурсам с
+                такими уточнениями. В этом они видят признак тщательной проработки контента.
+            </p>
 
+            <p>В тексте ниже у нас есть две цитаты: оригинал на английском и перевод на русском. Язык документа не
+                указан. Для цитаты на английском по-хорошему необходимо указать правильный язык.
+            </p>
+
+            <p>
+                Допишите атрибут <span class="text__accent-padding">lang</span> с нужными значениями для всего документа
+                и для первой
+                цитаты.
+            </p>
+
+            <!-- 01 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/05_theme/01_lesson/01_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/05_theme/01_lesson/01_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Обратите внимание, что кавычки, в которые заключены цитаты, теперь разные. Это небольшой бонус от
+                правильно указанного языка — браузер сам подбирает правильные знаки препинания.
+            </p>
 
         </div><!--main__wrapper-1-->
     </div><!--main-->

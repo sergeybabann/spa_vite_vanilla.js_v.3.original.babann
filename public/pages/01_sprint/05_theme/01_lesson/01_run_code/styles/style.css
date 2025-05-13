@@ -1,0 +1,18 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 850px;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  background-image: url(https://code.s3.yandex.net/web-code/images/dotted.svg);
+}
+
+body p {
+  width: 500px;
+  border: 1px solid #000;
+  padding: 50px;
+  background-color: #fff;
+}
