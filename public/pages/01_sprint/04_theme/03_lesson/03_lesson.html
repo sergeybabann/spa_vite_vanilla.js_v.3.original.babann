@@ -21,17 +21,269 @@
                 но единственный способ расположить на странице блоки типа шапки, подвала и двух-трёх колонок контента.
             </p>
 
+            <p>
+                Сегодня таблицы используют по прямому назначению — чтобы оформить табличные данные. Данные называются
+                табличными, если их удобно расположить в строки и столбцы. Например, чтобы сравнивать между собой.
+            </p>
 
+            <p>
+                Вёрстка таблиц — не самая частая задача. Так что один раз разберёмся с этой темой, чтобы в нужный момент
+                вы знали, что искать.
+            </p>
 
+            <p>
+                Сверстаем небольшую таблицу.
+            </p>
 
+            <!---------- IMAGE ---------->
+            <img src="/images/01_sprint/04_theme/03_lesson/table.png" alt="">
+
+            <p>
+                Самый главный тег для создания таблицы — это <span class="text__accent-padding">table</span>. В него
+                В него нужно завернуть всю таблицу, а уже внутри создавать строки и столбцы с данными.
+            </p>
+
+            <p>
+                Таблица состоит из строк. Их задают тегами <span class="text__accent-padding">tr</span>.
+                Строки разбивают на ячейки тегами <span class="text__accent-padding">td</span>.
+                Исключение составляют ячейки первой строки, потому что они содержат заголовки колонок. Поэтому такие
+                ячейки задают тегами <span class="text__accent-padding">th</span>.
+            </p>
+
+            <p>
+                Располагайте изображения и текст только внутри элементов <span class="text__accent-padding">td</span> и
+                <span class="text__accent-padding">th</span>. Остальные табличные теги — <span
+                    class="text__accent-padding">table</span> и <span class="text__accent-padding">tr</span> —
+                предназначены исключительно для создания структуры.
+            </p>
+
+            <p>
+                Вот самый минимальный набор тегов для создания таблицы. Теперь давайте попробуем их применить на
+                практике.
+            </p>
+
+            <p>
+                В разметке ниже все теги написаны на русском. Замените их на правильные теги.
+            </p>
 
             <!-- 01 RUN CODE -->
             <div class="run__code-block">
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code/index.html"
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/01_run_code/index.html"
                     target="_blank" rel="noopener noreferrer">Запустить код</a>
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code.zip" download>скачать
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/01_run_code.zip" download>скачать
                     блок кода</a>
             </div>
+
+            <p>
+                В самой простой ситуации число ячеек в каждой строке одинаковое. Однако ячейка таблицы может занять
+                место нескольких ячеек:
+            </p>
+
+            <!---------- IMAGE ---------->
+            <img src="/images/01_sprint/04_theme/03_lesson/table_2.png" alt="">
+
+            <p>
+                За это отвечают атрибуты <span class="text__accent-padding">rowspan</span> и
+                <span class="text__accent-padding">colspan</span>.
+            </p>
+
+            <p>
+                Найдите в последней строке таблицы ячейку «Среднее количество слов». Используйте атрибут
+                <span class="text__accent-padding">colspan</span> со значением “2”, чтобы растянуть её на две ячейки.
+            </p>
+
+            <!-- 02 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/02_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/02_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                И правда, что-то пошло не так. Теперь ячейка с показателем среднего количества слов вылезла за пределы
+                таблицы.
+            </p>
+
+            <p>Это частая проблема при использовании <span class="text__accent-padding">colspan</span> и
+                <span class="text__accent-padding">rowspan</span>. Чтобы устранить её, в строке или колонке нужно
+                удалить ячейки, место которых занимает растянутая ячейка.
+            </p>
+
+            <p>
+                Починим этот баг. Удалите в последней строке таблицы пустую ячейку.
+            </p>
+
+            <!-- 03 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/03_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/03_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                В нашей таблице нет такой необходимости, но мы можем растянуть ячейку не только по горизонтали, но и по
+                вертикали. Для этого нужен будет атрибут <span class="text__accent-padding">rowspan</span>.
+            </p>
+
+            <p>
+                У таблиц тоже есть (сюрприз!) семантические теги. Тег <span class="text__accent-padding">thead</span>
+                нужен для того, чтобы выделить строку с заголовками столбцов. Такая строка может быть не одна. Этот
+                тег должен находиться в разметке строго до <span class="text__accent-padding">tbody</span> и
+                <span class="text__accent-padding">tfoot</span>. По семантике
+                <span class="text__accent-padding">thead</span> очень похож на
+                <span class="text__accent-padding">header</span>.
+            </p>
+
+            <p>Оберните первую строку нашей таблицы в этот тег.</p>
+
+            <!-- 04 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/04_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/04_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Основные данные таблицы оборачиваются тегом <span class="text__accent-padding">tbody</span>.
+                Можно использовать один или несколько тегов в одной таблице для разделения данных на блоки, если
+                так будет логично. По смыслу этот тег похож на <span class="text__accent-padding">main</span>.
+            </p>
+
+            <p>
+                Оберните весь контент, кроме последней строки, в <span class="text__accent-padding">tbody</span>.
+            </p>
+
+            <!-- 05 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/05_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/05_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Если в вашей таблице не будет шапки и вы не вставите <span class="text__accent-padding">tbody</span>,
+                то браузер сам его добавит. В этом можно убедиться, открыв инструменты разработчика.
+            </p>
+
+            <p>
+                Строка с итогом помещается в <span class="text__accent-padding">tfoot</span>. По смыслу этот тег
+                очень похож на <span class="text__accent-padding">footer</span>. В таблице можно
+                использовать только один <span class="text__accent-padding">tfoot</span>. Технически в
+                разметке этот тег можно вставить в любом месте таблицы, но браузер всегда отрисует строку с итогом в
+                самом конце.
+            </p>
+
+            <p>Оберните последнюю строку в тег <span class="text__accent-padding">tfoot</span>.</p>
+
+
+            <!-- 06 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/06_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/06_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Все три этих тега не имеют стандартных стилей и влияют только на группировку данных по смыслу.
+            </p>
+
+            <p>
+                Остался последний важный тег, который нужно использовать со всеми таблицами
+                — <span class="text__accent-padding">caption</span>. Он обязательно
+                должен идти после открывающего тега <span class="text__accent-padding">table</span>.
+            </p>
+
+            <p>
+                В <span class="text__accent-padding">caption</span> надо кратко написать, что за данные представлены
+                в таблице. Это очень поможет людям, которые пользуются скринридерами. Подпись даст понять, нужно им
+                слушать содержимое такой таблицы или можно её пропустить.
+            </p>
+
+            <p>
+                Добавьте в разметку <span class="text__accent-padding">&lt;caption&gt; Три романа с самым большим
+                    количеством слов &lt;/caption&gt;</span> :
+            </p>
+
+            <!-- 07 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/07_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/07_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>Интересно, а как скринридер читает таблицы?</p>
+
+            <!---------- VIDEO ---------->
+            <video width="640" height="360" controls>
+                <source src="/video/01_sprint/04_theme/03_lesson/скринридер_3.mp4" type="video/mp4">
+            </video>
+
+            <p>
+                С разметкой разобрались, теперь стоит сказать пару слов о стилях таблицы.
+            </p>
+
+            <p>
+                По умолчанию у таблицы не отображаются рамки ячеек. Но это легко исправить. Раскомментируйте
+                CSS-правило, которое добавит рамки ячейкам.
+            </p>
+
+            <!-- 08 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/08_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/08_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Между рамками каждой ячейки по умолчанию будет небольшое расстояние. Это особенности стилей таблицы.
+            </p>
+
+            <p>
+                Чтобы рамки слиплись, нужно прописать для селектора
+                <span class="text__accent-padding">table</span> свойство
+                <span class="text__accent-padding">border-collapse: collapse;</span>. Добавьте
+                в CSS нужное правило.
+            </p>
+
+            <!-- 09 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/09_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/04_theme/03_lesson/09_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                На этом наше знакомство с таблицами окончено. Теперь вы знаете, какие теги вам пригодятся и почему рамки
+                не слипаются. Кстати, если вас занесёт в вёрстку email-рассылок, то там всё на таблицах.
+            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <!---------- DEMO CODE ---------->
             <pre class="code__example-block">
