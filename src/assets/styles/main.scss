@@ -11,6 +11,8 @@
 @use './layout/_footer.scss';
 @use './layout/_sidebar2.scss';
 
+@use './fonts';
+
 // Глобальные стили
 body {
   margin: 0;
@@ -19,6 +21,7 @@ body {
   background-color: $bg-dark-default;
   color: $color-content-primary;
   line-height: 2rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 ul,

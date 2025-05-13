@@ -49,6 +49,10 @@ const routes = {
   '/sprint_01/theme_04/lesson_02': () =>
     import('../pages/sprint_01/04_theme/02_lesson.js'),
 
+  /*-- 01 sprint --- 04 THEME -----*/
+  '/sprint_01/theme_04/lesson_03': () =>
+    import('../pages/sprint_01/04_theme/03_lesson.js'),
+
   /*-------------------- 02 SPRINT --------------------*/
   '/sprint_02': () => import('../pages/sprint_02/sprint_02.js'),
 
