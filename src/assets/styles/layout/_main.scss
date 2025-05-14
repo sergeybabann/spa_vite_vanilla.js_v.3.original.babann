@@ -78,7 +78,7 @@
 .main__list-1 {
   display: flex;
   flex-direction: column;
-  font-size: 25px;
+  font-size: $font-size-main__list-1;
   gap: 5px;
   margin-left: 50px;
   list-style: none;
