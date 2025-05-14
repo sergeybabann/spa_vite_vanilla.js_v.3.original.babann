@@ -15,38 +15,142 @@
     <div class="main">
         <div class="main__wrapper-1">
             <h1 class="main__title-1">2. Преобразование во флекс-контейнер</h1>
-            <p>
 
+            <p>
+                До сих пор мы верстали поток элементов. Те, что идут в HTML-коде первыми, всегда выше либо левее вторых.
+                Но при размещении элементов на странице часто требуется намного больше гибкости. Её может дать
+                флексбокс.
             </p>
 
+            <p>
+                Чтобы разобраться, начнём с примера. Нужно сверстать страницу поисковой системы. На ней три элемента:
+                логотип, поисковая строка и кнопка поиска. Задача — сначала выстроить их в ряд, а затем разместить по
+                центру страницы. Флексбокс поможет с этим справиться.
+            </p>
 
-
-
+            <p>
+                Все компоненты лежат внутри контейнера <span class="text__accent-padding">.form</span>.
+                Если задать ему свойство <span class="text__accent-padding">display: flex</span> , они выстроятся в
+                одну в линию:
+            </p>
 
             <!-- 01 RUN CODE -->
             <div class="run__code-block">
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code/index.html"
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/02_lesson/01_run_code/index.html"
                     target="_blank" rel="noopener noreferrer">Запустить код</a>
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code.zip" download>скачать
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/02_lesson/01_run_code.zip" download>скачать
                     блок кода</a>
             </div>
 
-            <!---------- DEMO CODE ---------->
-            <pre class="code__example-block">
-                <code>
-                код
-                </code>
-            </pre>
+            <p>
+                Свойство <span class="text__accent-padding">display: flex;</span> превращает элемент во флекс-контейнер,
+                а вложенные в него элементы — во флекс-элементы.
+            </p>
 
-            <!---------- VIDEO ---------->
-            <video width="640" height="360" controls>
-                <source src="/video/01_sprint/04_theme/01_lesson/Скринридер_1.mp4" type="video/mp4">
-            </video>
+            <ul>
+                <li>Флекс-контейнер — это родительский элемент. В нашем примере это элемент с селектором
+                    <span class="text__accent-padding">.form</span>. Он задаёт контекст — особые правила поведения
+                    внутри себя, которым следуют вложенные элементы.
+                </li>
+                <li>
+                    Флекс-элементы — дочерние элементы флекс-контейнера <span class="text__accent-padding">.form</span>.
+                    Они подчиняются правилам, которые устанавливает флекс-контейнер. В нашем примере это блоки
+                    <span class="text__accent-padding">.form-item</span> с вложенными в них логотипом, поисковой строкой
+                    и кнопкой.
+                </li>
+            </ul>
+
+            <p>
+                Если во флекс-контейнере несколько элементов, они сразу же выстраиваются в строку. Вы только что в этом
+                убедились сами. Казалось бы, что здесь необычного? Мы и раньше могли получить такое поведение при помощи
+                <span class="text__accent-padding">display: inline-block</span>.
+            </p>
+
+            <p>
+                Но флексбокс универсальный, как швейцарский нож. Выстраиванием элементов в строку он не ограничивается.
+                У него есть и другие суперспособности:
+            </p>
+
+            <ul>
+                <li>
+                    Он задаёт контекст работы одного или группы элементов, в то время как
+                    <span class="text__accent-padding">display: block/inline/inline-block</span> определяет поведение
+                    конкретного компонента. Поэтому флекс применяют к родителю, а не к самому элементу.
+                </li>
+                <li>
+                    Он делает блоки «резиновыми». Элементы могут сжиматься и растягиваться по заданным правилам, занимая
+                    нужное пространство, или автоматически выстраиваться в несколько строк или столбцов, занимая всё
+                    предоставленное место.
+                </li>
+            </ul>
+
+            <p>
+                В следующих уроках вы узнаете ещё много интересного. А пока доделаем нашу задачу.
+            </p>
+
+            <p>
+                Нужно не только выстроить элементы поисковика в ряд, но и разместить их по центру страницы. Здесь на
+                помощь придёт свойство <span class="text__accent-padding">margin: auto</span>.
+            </p>
+
+            <p>
+                Да, свойство знакомое. Но в контексте флексбокса <span class="text__accent-padding">margin: auto</span>
+                работает по-новому. У него появляется две способности:
+            </p>
+
+            <ul>
+                <li>выравнивать элементы по центру по вертикали и горизонтали;</li>
+                <li>работать не только с блочными, но с любыми элементами.</li>
+            </ul>
+
+            <p>
+                Чтобы переместить сразу три элемента в центр, мы обернём их в контейнер
+                <span class="text__accent-padding">.form-content</span> и добавим ему
+                флексовый контекст. Получилось, что один контейнер вложен в другой. Да, так можно делать.
+            </p>
+
+            <p>
+                У <span class="text__accent-padding">.form</span> и
+                <span class="text__accent-padding">.form-content</span> появится интересная связь. В этом примере
+                <span class="text__accent-padding">.form</span> будет родителем, а
+                <span class="text__accent-padding">.form-content</span> — его дочерним элементом и одновременно
+                родителем для трёх элементов: <span class="text__accent-padding">.logo</span>,
+                <span class="text__accent-padding">.search</span> и
+                <span class="text__accent-padding">.button-search</span>.
+            </p>
 
             <!---------- IMAGE ---------->
-            <img src="/images/01_sprint/01_theme/01_lesson/01_image.png" alt="">
+            <img src="/images/01_sprint/06_theme/01_lesson/02_image.png" alt="">
 
 
+            <p>
+                Такая связь позволяет управлять положением блока
+                <span class="text__accent-padding">.form-content</span> внутри флекс-контейнера
+                <span class="text__accent-padding">.form</span>. Например, добавление свойства
+                <span class="text__accent-padding">margin: auto</span> приведёт к тому, что
+                <span class="text__accent-padding">.form-content</span>вместе со всеми вложенными
+                элементами окажется в центре контейнера
+                <span class="text__accent-padding">.form</span>.
+            </p>
+
+            <p>
+                Правильный подход — на практике разобраться проще. Разметка готова, осталось дописать одно правило.
+                Сделайте <span class="text__accent-padding">.form-content</span>.form-content флекс-контейнером и
+                добавьте ему свойство <span class="text__accent-padding">margin: auto</span>.
+            </p>
+
+            <!-- 02 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/02_lesson/02_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/02_lesson/02_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Задача выполнена — вы расположили все элементы по центру страницы, а заодно познакомились с тем, как
+                работает флекс-контейнер.
+            </p>
 
         </div><!--main__wrapper-1-->
     </div><!--main-->
