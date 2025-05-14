@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 850px;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+.header {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 15px;
+  background-color: #ffc802;
+}
+
+.logo__image {
+  width: 150px;
+}
+
+.menu {
+  /* Добавьте margin-left */
+}
+
+.menu__list {
+  list-style: none;
+}
+
+.menu__list-item {
+  margin-left: 10px;
+}
+
+.menu__list-link {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu__list-link:hover {
+  text-decoration: underline;
+}

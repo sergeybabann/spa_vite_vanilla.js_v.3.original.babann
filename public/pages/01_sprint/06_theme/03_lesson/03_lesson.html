@@ -15,13 +15,69 @@
     <div class="main">
         <div class="main__wrapper-1">
             <h1 class="main__title-1">3. Вложенные флекс-контейнеры</h1>
-            <p>
 
+            <p>
+                Внутри флекс-контейнеров располагаются флекс-элементы. Каждый элемент может сам стать флекс-контейнером
+                и управлять поведением тех элементов, которые вложены в него. И так до бесконечности.
+            </p>
+
+            <p>
+                Если пока ничего непонятно, не расстраивайтесь, сейчас будет пример. Для него идеально подойдёт шапка
+                сайта с логотипом. Заготовка с разметкой уже готова, осталось разместить логотип и меню на одной строке.
+                Потом — прижать ссылки к правому краю и тоже выровнять их в строку.
+            </p>
+
+            <p>Сначала превратите блок <span class="text__accent-padding">.header</span> во флекс-контейнер. Для этого
+                достаточно добавить одно свойство CSS.</p>
+
+            <!-- 01 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/03_lesson/01_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/03_lesson/01_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Флексбокс сработал ровно так, как ожидалось: логотип и список ссылок расположились на одной строке.
+                Теперь нужно перенести список ссылок на противоположную сторону — прижать его к правому краю страницы.
+            </p>
+
+            <p>
+                Добавьте блоку <span class="text__accent-padding">.menu</span>
+                свойство <span class="text__accent-padding">margin-left: auto</span>.
+            </p>
+
+            <!-- 02 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/03_lesson/02_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/03_lesson/02_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>Остался последний шаг. Сейчас ссылки располагаются списком, друг под другом. Сделайте так, чтобы они
+                выстроились в одну строку.
+            </p>
+
+            <p>
+                Сделайте блок <span class="text__accent-padding">.menu__list</span> флекс-контейнером
+                и посмотрите, как изменится внешний вид меню.
             </p>
 
 
 
 
+
+
+
+
+            <!---------- DEMO CODE ---------->
+            <pre class="code__example-block">
+                <code>
+                код
+                </code>
+            </pre>
 
             <!-- 01 RUN CODE -->
             <div class="run__code-block">
@@ -30,13 +86,6 @@
                 <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code.zip" download>скачать
                     блок кода</a>
             </div>
-
-            <!---------- DEMO CODE ---------->
-            <pre class="code__example-block">
-                <code>
-                код
-                </code>
-            </pre>
 
             <!---------- VIDEO ---------->
             <video width="640" height="360" controls>
