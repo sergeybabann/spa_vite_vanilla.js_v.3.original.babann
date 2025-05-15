@@ -15,39 +15,108 @@
     <div class="main">
         <div class="main__wrapper-1">
             <h1 class="main__title-1">4. Направление внутри флекс-контейнера</h1>
-            <p>
 
+            <p>
+                Пришло время посмотреть на работу флексбокса внимательнее. Например, узнать, что происходит с
+                контейнером, когда вы задаёте ему свойство <span class="text__accent-padding">display: flex</span>.
             </p>
 
+            <p>
+                Когда вы пишете <span class="text__accent-padding">display: flex</span>, внутри контейнера появляются
+                две оси — основная и поперечная.
+            </p>
 
+            <!---------- IMAGE ---------->
+            <img src="/images/01_sprint/06_theme/04_lesson/01_image.png" alt="">
 
+            <ul>
+                <li>
+                    Основная ось — направляющая флекс-контейнера, вдоль которой располагаются флекс-элементы.
+                </li>
+                <li>Поперечная (дополнительная, побочная, перпендикулярная) ось — ось, которая идёт перпендикулярно
+                    основной.
+                </li>
+            </ul>
 
+            <p>
+                Понимание того, как работают основная и поперечная оси, помогает ловко менять расположение элементов
+                внутри контейнеров. Убедимся в этом на практике.
+            </p>
+
+            <p>
+                У нас есть блок с тремя вкладками. Кнопки для переключения между вкладками выстроились в одну строку.
+                Нужно сделать так, чтобы кнопки для переключения вкладок перестроились в столбец — одна под другой.
+            </p>
+
+            <p>
+                Чтобы добиться такого эффекта, достаточно изменить направление основной оси — она должна смотреть не
+                слева направо, а сверху вниз. И поможет это сделать свойство
+                <span class="text__accent-padding">flex-direction</span>.
+            </p>
+
+            <p>
+                Добавьте флекс-контейнеру <span class="text__accent-padding">.tabs</span> свойство
+                <span class="text__accent-padding">flex-direction: column</span> и посмотрите, как изменится отображение
+                вкладок.
+            </p>
 
             <!-- 01 RUN CODE -->
             <div class="run__code-block">
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code/index.html"
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/04_lesson/01_run_code/index.html"
                     target="_blank" rel="noopener noreferrer">Запустить код</a>
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code.zip" download>скачать
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/04_lesson/01_run_code.zip" download>скачать
                     блок кода</a>
             </div>
 
-            <!---------- DEMO CODE ---------->
-            <pre class="code__example-block">
-                <code>
-                код
-                </code>
-            </pre>
-
-            <!---------- VIDEO ---------->
-            <video width="640" height="360" controls>
-                <source src="/video/01_sprint/04_theme/01_lesson/Скринридер_1.mp4" type="video/mp4">
-            </video>
+            <p>Пока вы не трогали направление основной оси внутри контейнера
+                <span class="text__accent-padding">.tabs</span>,
+                оно смотрело слева направо, а все вкладки ютились на одной строке. Но когда вы добавили свойство
+                <span class="text__accent-padding">flex-direction: column</span>, направление основной
+                оси изменилось. Теперь она располагается сверху вниз. Поперечная же ось стала двигаться слева направо.
+            </p>
 
             <!---------- IMAGE ---------->
-            <img src="/images/01_sprint/01_theme/01_lesson/01_image.png" alt="">
+            <img src="/images/01_sprint/06_theme/04_lesson/02_image.png" alt="">
 
+            <p>
+                Вы ничего не делали с кнопками для переключения между вкладками. Они всё так же продолжают
+                следовать по направлению основной оси. Но благодаря свойству
+                <span class="text__accent-padding">flex-direction</span> изменилось само направление
+                основной оси.
+            </p>
+            <p>
+                Вы использовали значение <span class="text__accent-padding">column</span> ,
+                поэтому элементы флекс-контейнера двигаются сверху вниз. Всего же направление можно менять в четыре
+                стороны:
+            </p>
 
+            <ul>
+                <li>
+                    <span class="text__accent-padding">flex-direction: row</span> — обычный ряд, элементы следуют
+                    в потоке, слева направо. Это значение по умолчанию. Его можно не прописывать, если вы не меняли
+                    направление до этого.
+                </li>
 
+                <li>
+                    <span class="text__accent-padding">flex-direction: row-reverse</span> — ряд в обратном порядке,
+                    справа налево.
+                </li>
+
+                <li>
+                    <span class="text__accent-padding">flex-direction: column</span> — колонка в обычном порядке. Вы уже
+                    с ней познакомились.
+                </li>
+                <li>
+                    <span class="text__accent-padding">flex-direction: column-reverse</span> — колонка в обратном
+                    порядке, элементы выстроятся снизу вверх.
+                </li>
+            </ul>
+
+            <p>Даже если вы не будете явно использовать свойство
+                <span class="text__accent-padding">flex-direction</span>, представлять направление основной и
+                поперечной осей внутри контейнера придётся постоянно. В следующих уроках вы будете встречать эти термины
+                так же часто, как слово «контекст».
+            </p>
         </div><!--main__wrapper-1-->
     </div><!--main-->
 </div><!--margin__main-->

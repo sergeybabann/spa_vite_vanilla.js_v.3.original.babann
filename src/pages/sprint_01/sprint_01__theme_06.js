@@ -30,7 +30,7 @@ export default function Sprint_01_Theme_06() {
               <a class="main__link-default" href="/sprint_01/theme_06/lesson_03">3. Вложенные флекс-контейнеры</a>         
           </li>
           <li class="main__list-1-item">
-              <a class="main__link-default" href="/sprint_01/theme_06/lesson_04. Направление внутри флекс-контейнера</a>         
+              <a class="main__link-default" href="/sprint_01/theme_06/lesson_04">4. Направление внутри флекс-контейнера</a>         
           </li>
           <li class="main__list-1-item">
               <a class="main__link-default" href="/sprint_01/theme_06/lesson_05">5. Выравнивание по основной оси</a>         
