@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 900px;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  background-image: url(https://code.s3.yandex.net/web-code/images/dotted-l.svg);
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 25px;
+  background-color: #fff;
+}
+
+.title {
+  text-align: center;
+}
+
+.diary {
+  display: flex;
+  justify-content: center;
+
+  /* Допишите свойство здесь */
+}
+
+.diary__img {
+  width: 150px;
+}
+
+.diary__list {
+  margin-left: 50px;
+  font-size: 24px;
+}

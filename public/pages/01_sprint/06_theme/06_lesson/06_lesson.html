@@ -15,13 +15,166 @@
     <div class="main">
         <div class="main__wrapper-1">
             <h1 class="main__title-1">6. Выравнивание по дополнительной оси</h1>
-            <p>
 
+            <p>
+                Мы много говорили про основную ось флексбокса: меняли её направление, использовали свойство
+                <span class="text__accent-padding">justify-content</span>.
+            </p>
+
+            <p>
+                Будем исправляться. Тем более поперечная ось — не менее интересная, чем основная. Чтобы оценить её
+                важность, поработаем со страницей, на которой размещены список вопросов и изображение. Проблема
+                очевидная — изображение растянулось. Выглядит некрасиво.
+            </p>
+
+            <!-- 01 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/06_lesson/01_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/06_lesson/01_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Дело здесь в том, что внутри флекс-контейнера элементы по умолчанию растягиваются по поперечной оси. И
+                это не ошибка, а очень удобная штука. Благодаря такому поведению можно задать всем элементам одинаковый
+                размер, без явного указания ширины и высоты.
+            </p>
+
+            <p>
+                Это объясняет поведение изображения. Оно автоматически растягивается до высоты текста. Сделайте список
+                короче — изображение тоже уменьшится по высоте. Сделайте список длиннее — изображение растянется
+                сильнее.
+            </p>
+
+            <p>
+                Проверьте сами. Уберите несколько вопросов и посмотрите, как изменится изображение. Затем, наоборот,
+                увеличьте список — добавьте ещё несколько вопросов для саморефлексии. Снова посмотрите, как изменится
+                изображение.
+            </p>
+
+            <!-- 02 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/06_lesson/02_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/06_lesson/02_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                За выравнивание флекс-элементов по поперечной оси отвечает свойство
+                <span class="text__accent-padding">align-items</span>. По умолчанию у него
+                установлено значение <span class="text__accent-padding">stretch</span>. Поэтому элементы
+                растянуты от одного края контейнера <span class="text__accent-padding">.diary</span> до другого.
+            </p>
+
+            <p>
+                Чтобы убрать это растяжение, установите значение
+                <span class="text__accent-padding">align-items: center</span>
+                родительскому контейнеру <span class="text__accent-padding">.diary</span>.
+            </p>
+
+            <!-- 03 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/06_lesson/03_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/06_lesson/03_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Изображение больше не растягивается. Теперь оно расположилось точно по центру контейнера по поперечной
+                оси.
+            </p>
+
+            <p>
+                Свойство <span class="text__accent-padding">align-items</span> принимает следующие значения:
+            </p>
+
+            <ul>
+                <li>
+                    <span class="text__accent-padding">stretch</span> — элементы растягиваются вдоль поперечной оси
+                    так, чтобы заполнить всего родителя.
+                </li>
+                <li>
+                    <span class="text__accent-padding">start</span> — элементы прижимаются к началу поперечной оси.
+                </li>
+                <li>
+                    <span class="text__accent-padding">end</span> — элементы прижимаются к концу поперечной оси.
+                </li>
+                <li>
+                    <span class="text__accent-padding">center</span> — элементы выстраиваются по центру поперечной оси.
+                </li>
+                <li>
+                    <span class="text__accent-padding">baseline</span> — элементы выравниваются по базовой линии текста.
+                </li>
+            </ul>
+
+            <p>
+                Да, у этих свойств много общего. Только <span class="text__accent-padding">justify-content</span>
+                работает на основной оси, а <span class="text__accent-padding">align-items</span> — на
+                поперечной. Но их можно комбинировать, чтобы управлять содержимым флекс-контейнеров.
+            </p>
+
+            <p>
+                Вернёмся к примеру с поисковой строкой, логотипом и кнопкой. Мы размещали их по центру с помощью
+                свойства <span class="text__accent-padding">margin: auto</span>. Того же эффекта можно добиться
+                через правила контекста флекс-контейнера.
+            </p>
+
+            <p>
+                Пришло время применить комбинацию <span class="text__accent-padding">justify-content</span> и
+                <span class="text__accent-padding">align-items</span>.
+                Задайте оба свойства со значением <span class="text__accent-padding">center</span>
+                родительскому контейнеру <span class="text__accent-padding">.form</span>.
+            </p>
+
+            <!-- 04 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/06_lesson/04_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/06_lesson/04_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Всё сработало так, как должно. Основная ось внутри <span class="text__accent-padding">.form</span>
+                направлена слева направо. Когда вы добавляете
+                <span class="text__accent-padding">justify-content: center</span>, поисковая строка располагается по
+                центру контейнера на самом верху. Свойство <span class="text__accent-padding">align-items: center</span>
+                делает то же самое, но по поперечной оси, которая расположена сверху вниз. В результате поисковая строка
+                оказывается посередине контейнера.
+            </p>
+
+            <p>
+                Потому что управлять через контекст удобнее, чем задавать правило каждому элементу по отдельности. Когда
+                правила заданы контекстом, не имеет значения, сколько элементов вы разместите внутри флекс-контейнера
+                <span class="text__accent-padding">.form</span>. Все они будут подчиняться правилам расположения по
+                основной и поперечной осям.
+            </p>
+
+            <p>
+                Чтобы ещё раз убедиться в этом, попробуйте разные сочетания свойств в тренажёре. Меняйте направление и
+                управляйте расположением элементов с помощью <span class="text__accent-padding">justify-content</span>
+                и <span class="text__accent-padding">align-items</span>.
             </p>
 
 
 
 
+
+
+
+
+
+
+
+            <!---------- DEMO CODE ---------->
+            <pre class="code__example-block">
+                <code>
+                код
+                </code>
+            </pre>
 
             <!-- 01 RUN CODE -->
             <div class="run__code-block">
@@ -30,13 +183,6 @@
                 <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code.zip" download>скачать
                     блок кода</a>
             </div>
-
-            <!---------- DEMO CODE ---------->
-            <pre class="code__example-block">
-                <code>
-                код
-                </code>
-            </pre>
 
             <!---------- VIDEO ---------->
             <video width="640" height="360" controls>
