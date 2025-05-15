@@ -25,6 +25,7 @@ body {
 
 .content {
   display: flex;
+  flex-wrap: [допишите значение];
   max-width: 780px;
   margin: 0 50px;
 }

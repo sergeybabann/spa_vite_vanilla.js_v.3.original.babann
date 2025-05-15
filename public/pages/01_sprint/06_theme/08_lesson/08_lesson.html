@@ -15,39 +15,130 @@
     <div class="main">
         <div class="main__wrapper-1">
             <h1 class="main__title-1">8. Перенос флекс-элементов</h1>
-            <p>
-
-            </p>
-
-
-
 
 
             <!-- 01 RUN CODE -->
             <div class="run__code-block">
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code/index.html"
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/08_lesson/01_run_code/index.html"
                     target="_blank" rel="noopener noreferrer">Запустить код</a>
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code.zip" download>скачать
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/08_lesson/01_run_code.zip" download>скачать
                     блок кода</a>
             </div>
 
-            <!---------- DEMO CODE ---------->
-            <pre class="code__example-block">
-                <code>
-                код
-                </code>
-            </pre>
+            <p>
+                Это стандартное поведение флексбокса. Элементы настраивают свою ширину так, чтобы поместиться в
+                контейнер. Не помогло даже то, что мы явно указали размеры карточек в пикселях. Флексбокс просто
+                проигнорировал это указание.
+            </p>
 
-            <!---------- VIDEO ---------->
-            <video width="640" height="360" controls>
-                <source src="/video/01_sprint/04_theme/01_lesson/Скринридер_1.mp4" type="video/mp4">
-            </video>
+            <p>
+                Хорошая новость — вы можете управлять этим поведением и сделать так, чтобы карточки переносились, если
+                не влезают в контейнер.
+            </p>
+
+            <p>
+                У флекс-контейнеров есть свойство <span class="text__accent-padding">flex-wrap</span>.
+                По умолчанию ему задано значение <span class="text__accent-padding">nowrap</span>, которое запрещает
+                перенос элементов, которые не влезают в контейнер.
+            </p>
+
+            <p>
+                Задайте контейнеру <span class="text__accent-padding">.content</span>
+                свойство <span class="text__accent-padding">flex-wrap</span> со значением
+                <span class="text__accent-padding">wrap</span> и посмотрите, как изменится поведение элементов.
+            </p>
+
+            <!-- 02 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/08_lesson/02_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/08_lesson/02_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Кроме <span class="text__accent-padding">wrap</span>, есть значение
+                <span class="text__accent-padding">wrap-reverse</span>. Оно делает так, что переносятся не
+                последние, а первые элементы строки или колонки. Примените его к контейнеру
+                <span class="text__accent-padding">.content</span> и посмотрите, как
+                изменится порядок отображения карточек.
+            </p>
+
+            <p>
+                С переносами разобрались. Осталось распределить карточки статей по всей ширине страницы — сейчас они
+                прижаты к левому краю. Вы уже знаете, как это сделать с помощью свойства
+                <span class="text__accent-padding">justify-content</span>. Укажите для него значение
+                <span class="text__accent-padding">space-around</span> и посмотрите, что получится.
+            </p>
+
+            <!-- 03 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/08_lesson/03_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/08_lesson/03_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Что-то пошло не так. Из-за того, что количество карточек на первой и второй строках отличается, свойство
+                <span class="text__accent-padding">space-around</span> по-разному распределяет пустое пространство между
+                ними. Так точно не пойдёт.
+            </p>
+
+            <p>
+                На самом деле в этой ситуации вообще нет смысла управлять распределением пространства на уровне
+                контекста. Нам ведь просто нужны отступы между карточками. Их и настроим.
+            </p>
+
+            <p>
+                Уберите свойство <span class="text__accent-padding">justify-content</span> и
+                задайте элементу <span class="text__accent-padding">.card</span> отступы 25px справа и снизу.
+            </p>
+
+            <!-- 04 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/08_lesson/04_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/08_lesson/04_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Теперь карточки выстраиваются друг под другом, а между ними есть промежутки. Но появилась другая
+                проблема — «висящий» <span class="text__accent-padding">margin</span> у последнего элемента в
+                строке. Он добавляет справа отступ, который не нужен.
+            </p>
+
+            <p>
+                Можно обнулить <span class="text__accent-padding">margin-right</span> у отдельных карточек.
+                Но порядковый номер последнего элемента в строке постоянно меняется в зависимости от ширины окна.
+                Это может быть вторая карточка, третья, четвёртая.
+            </p>
+
+            <p>
+                Здесь пришлось бы обнулять марджин каждого третьего элемента.
+            </p>
 
             <!---------- IMAGE ---------->
-            <img src="/images/01_sprint/01_theme/01_lesson/01_image.png" alt="">
+            <img src="/images/01_sprint/06_theme/08_lesson/01_image.png" alt="">
 
+            <p>
+                А здесь пришлось бы обнулять марджины каждого второго элемента.
+            </p>
 
+            <!---------- IMAGE ---------->
+            <img src="/images/01_sprint/06_theme/08_lesson/02_image.png" alt="">
 
+            <p>
+                Всё в порядке. Через решение таких проблем вы приобретаете бесценный опыт. Например, теперь вы
+                знаете, что <span class="text__accent-padding">justify-content: space-around/space-between</span>
+                и боковые отступы через <span class="text__accent-padding">margin</span> не подходят для равномерного
+                переноса карточек. Значит, не будете терять время на их использование в других проектах.
+            </p>
+
+            <p>
+                Простой и удобный способ настройки отступов уже ждёт вас в следующем уроке.
+            </p>
         </div><!--main__wrapper-1-->
     </div><!--main-->
 </div><!--margin__main-->

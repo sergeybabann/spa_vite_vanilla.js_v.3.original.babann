@@ -25,6 +25,10 @@ body {
 
 .content {
   display: flex;
+  flex-wrap: wrap;
+
+  /* Удалите justify-content */
+  justify-content: space-around;
   max-width: 780px;
   margin: 0 50px;
 }
