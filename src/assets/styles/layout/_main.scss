@@ -122,6 +122,14 @@
   }
 }
 
+.main__text-accent {
+  padding: $text-accent-padding-2;
+  border: $border-light-mute;
+  border-radius: 3px;
+  background-color: $bg-text-accent;
+  color: #000;
+}
+
 .text__accent-padding {
   padding: $text-accent-padding;
   border: $border-light-mute;
