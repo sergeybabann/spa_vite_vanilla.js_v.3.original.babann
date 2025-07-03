@@ -28,7 +28,7 @@ body {
   flex-wrap: wrap;
 
   /* Удалите justify-content */
-  justify-content: space-around;
+  /*justify-content: space-around; */
   max-width: 780px;
   margin: 0 50px;
 }
@@ -39,6 +39,8 @@ body {
   width: 350px;
   border: 1px solid #fd24af;
   padding: 25px;
+  margin-bottom: 25px;
+  margin-right: 25px; /* 25px */
 }
 
 .card__img {
