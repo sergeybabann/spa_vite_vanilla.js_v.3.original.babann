@@ -16,38 +16,76 @@
         <div class="main__wrapper-1">
             <h1 class="main__title-1">10. Выравнивание флекс-элементов при переносе</h1>
             <p>
-
+                Вы уже умеете управлять содержимым флекс-контейнера с помощью
+                <span class="text__accent-padding">justify-content</span> и
+                <span class="text__accent-padding">align-items</span>.
+                В этом уроке вы познакомитесь ещё с одним свойством. Оно помогает распределять пространство
+                между строками при переносе элементов.
             </p>
 
-
-
-
+            <p>
+                Добавьте флекс-контейнеру <span class="text__accent-padding">.content</span> свойство
+                <span class="text__accent-padding">align-content</span> со значением
+                <span class="text__accent-padding">center</span> и посмотрите, как
+                изменится внешний вид страницы. Затем измените ширину окна. Строки с элементами будут
+                располагаться по тому правилу, которое вы задали.
+            </p>
 
             <!-- 01 RUN CODE -->
             <div class="run__code-block">
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code/index.html"
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/10_lesson/01_run_code/index.html"
                     target="_blank" rel="noopener noreferrer">Запустить код</a>
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code.zip" download>скачать
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/10_lesson/01_run_code.zip" download>скачать
                     блок кода</a>
             </div>
 
-            <!---------- DEMO CODE ---------->
-            <pre class="code__example-block">
-                <code>
-                код
-                </code>
-            </pre>
+            <p>
+                Свойство <span class="text__accent-padding">align-content</span>
+                отвечает за то, как поведут себя элементы при переносе на новую строку или
+                колонку при включённом
+                <span class="text__accent-padding">flex-wrap</span>. Чтобы оно работало, должно выполняться
+                два условия:
+            </p>
 
-            <!---------- VIDEO ---------->
-            <video width="640" height="360" controls>
-                <source src="/video/01_sprint/04_theme/01_lesson/Скринридер_1.mp4" type="video/mp4">
-            </video>
+            <ol>
+                <li>Разрешён перенос элементов с помощью <span class="text__accent-padding">flex-wrap</span>.</li>
+                <li>Высота флекс-контейнера больше, чем высота вложенных в него элементов. Иначе вы не увидите никакой
+                    разницы, потому что не останется свободного пространства для распределения.</li>
+            </ol>
 
-            <!---------- IMAGE ---------->
-            <img src="/images/01_sprint/01_theme/01_lesson/01_image.png" alt="">
+            <p>
+                У свойства <spann class="text__accent-padding">align-content</spann>
+                почти такой же набор значений, как у <span class="text__accent-padding">justify-content</span>.
+            </p>
 
+            <ul>
+                <li><span class="text__accent-padding">stretch</span> (значение по умолчанию) — строки растягиваются
+                    одинаково так, чтобы занять всё доступное пространство родителя.</li>
+                <li><span class="text__accent-padding">start</span> — все строки располагаются у начала родителя.</li>
+                <li><span class="text__accent-padding">end</span>— все строки располагаются у конца родителя.</li>
+                <li><span class="text__accent-padding">center</span>— строки выравниваются по центру родителя.</li>
+                <li><span class="text__accent-padding">space-between</span>— первая строка прижимается к началу,
+                    последняя — к концу родительского контейнера, а остальные располагаются так, чтобы свободное
+                    пространство разделилось между ними равномерно.</li>
+                <li><span class="text__accent-padding">space-around</span>— отступы у каждой строки равнозначны
+                    отступам у любой другой строки.</li>
+                <li><span class="text__accent-padding">space-evenly</span>— отступы между строками и от краёв родителя
+                    одинаковые.</li>
+            </ul>
 
+            <!-- 02 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/10_lesson/02_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/10_lesson/02_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
 
+            <p>
+                Теперь, если элементам не хватает места, они аккуратно переносятся на следующую строку. Вы можете
+                добавить сколько угодно элементов, изменить ширину окна — и ничего не сломается. Но и это не вся сила
+                флексбокса.
+            </p>
         </div><!--main__wrapper-1-->
     </div><!--main-->
 </div><!--margin__main-->

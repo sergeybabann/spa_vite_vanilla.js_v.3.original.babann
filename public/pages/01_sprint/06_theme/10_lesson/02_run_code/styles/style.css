@@ -27,10 +27,11 @@ body {
   display: flex;
   flex-wrap: wrap;
 
-  /*
-  Добавьте свойство
-  align-content: center;
+  /* 
+  Попробуйте разные
+  значения align-content
   */
+  align-content: center;
   gap: 25px;
   max-width: 780px;
   height: 900px;

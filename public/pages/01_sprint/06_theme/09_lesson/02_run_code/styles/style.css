@@ -27,13 +27,9 @@ body {
   display: flex;
   flex-wrap: wrap;
 
-  /*
-  Добавьте свойство
-  align-content: center;
-  */
-  gap: 25px;
+  /* Измените значения свойства gap */
+  gap: 25px 15px;
   max-width: 780px;
-  height: 900px;
   margin: 0 50px;
 }
 

@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 850px;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+.page-title {
+  max-width: 780px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* Допишите свойства */
+  max-width: 780px;
+  margin: 0 50px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  border: 1px solid #fd24af;
+  padding: 25px;
+}
+
+.card__img {
+  width: 150px;
+  margin-right: 5%;
+}
