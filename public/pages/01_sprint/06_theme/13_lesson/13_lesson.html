@@ -15,38 +15,213 @@
     <div class="main">
         <div class="main__wrapper-1">
             <h1 class="main__title-1">13. Flex basis, flex-grow и flex-shrink</h1>
-            <p>
 
+            <p>
+                Вот вам классическая задача с собеседования. Нужно сделать стики футер. Его суть в том, что даже если на
+                странице недостаточно контента, футер не подпрыгивает вверх и не висит посреди страницы, а всегда
+                остаётся внизу.
             </p>
 
+            <p>
+                Не счесть (потому что мы, честно говоря, и не считали) количество начинающих верстальщиков, которые
+                заваливают эту задачу на собеседовании. Но вы в их число уже точно не попадёте. Потому что сейчас
+                узнаете простой способ сделать так, чтобы футер всегда был внизу страницы.
+            </p>
 
+            <p>
+                На задачу можно посмотреть иначе. Незачем прилеплять футер к низу. Нам просто нужно, чтобы контент занял
+                всё свободное пространство. В итоге футер окажется внизу — ему просто некуда больше деться.
+            </p>
 
+            <p>
+                Значит, для решения задачи нужно перераспределить свободное пространство на странице. Сделать это можно
+                с помощью свойства <span class="text__accent-padding">flex-grow</span>. Но для его работы
+                нужно подготовить условия:
+            </p>
 
+            <ol>
+                <li>Сделайте <span class="text__accent-padding">body</span> флекс-контейнером.</li>
+                <li>Измените направление внутри контейнера на <span class="text__accent-padding">column</span>.</li>
+                <li>Укажите минимальную высоту <span class="text__accent-padding">body</span> — 100%.</li>
+                <li>Добавьте блоку <span class="text__accent-padding">.main</span> свойство
+                    <span class="text__accent-padding">flex-grow</span> и установите значение
+                    <span class="text__accent-padding">1</span>.
+                </li>
+            </ol>
 
             <!-- 01 RUN CODE -->
             <div class="run__code-block">
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code/index.html"
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/13_lesson/01_run_code/index.html"
                     target="_blank" rel="noopener noreferrer">Запустить код</a>
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code.zip" download>скачать
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/13_lesson/01_run_code.zip" download>скачать
                     блок кода</a>
             </div>
+
+            <p>
+                Когда вы задали блоку <span class="text__accent-padding">.main</span> свойство
+                <span class="text__accent-padding">flex-grow: 1</span>, то отдали ему всё оставшееся
+                свободное пространство по высоте. В итоге футер оказался прижатым к низу страницы.
+            </p>
+
+            <p>
+                Свойство <span class="text__accent-padding">flex-grow</span> указывает, можно ли
+                флекс-элементу расшириться при наличии свободного места и
+                насколько. Его значением может быть любое положительное целое число. По умолчанию значение
+                равно <span class="text__accent-padding">0</span> —
+                расширяться нельзя.
+            </p>
+
+            <p>
+                Если всем флекс-элементам задать <span class="text__accent-padding">flex-grow: 1</span>,
+                то свободное пространство равномерно распределится между
+                ними. Но стоит нам задать одному элементу <span class="text__accent-padding">flex-grow: 2</span>,
+                как он заберёт себе в два раза больше свободного
+                пространства, чем элементы с<br> <span class="text__accent-padding">flex-grow: 1</span>.
+            </p>
+
+            <p>
+                Нет, это только начало. Дальше — ещё интереснее. Возьмём ещё одну распространённую задачу.
+            </p>
+
+            <p>
+                На странице размещены карточки с эпизодами подкаста. Пока вышло пять выпусков. Нужно сделать так, чтобы
+                в первом ряду разместились три эпизода, а две оставшиеся карточки заняли всю ширину родительского
+                контейнера во втором ряду.
+            </p>
+
+            <p>
+                Решить эту задачу поможет свойство <span class="text__accent-padding">flex-basis</span>. Оно указывает
+                размер элемента до того, как на него начнёт действовать расширение.
+            </p>
+
+            <p>
+                Значением <span class="text__accent-padding">flex-basis</span> может быть размер в любых
+                относительных или абсолютных единицах. Значение по
+                умолчанию — <span class="text__accent-padding">auto</span>. В таком случае элемент занимает
+                столько пространства, сколько требуется для отображения его контента.
+            </p>
+
+            <p>
+                Добавьте элементу <span class="text__accent-padding">.card</span> базовый размер
+                <span class="text__accent-padding">300px</span>. Затем разрешите
+                карточкам занимать свободное пространство,
+                если оно есть.
+            </p>
+
+            <!-- 02 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/13_lesson/02_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/13_lesson/02_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Когда в строке перестаёт хватать места, карточки переносятся на следующую строку. И сразу
+                занимают всё свободное пространство, учитывая коэффициент расширения, заданный с помощью
+                <span class="text__accent-padding">flex-grow</span>.
+            </p>
+
+            <p>
+                Если вы любите формулы — <a class="external__link"
+                    href="https://scribe.rip/@stasonmars/%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-flex-grow-%D0%B2-css-%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%BE%D0%B5-%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-557d406be844"
+                    target="_blank">вот перевод хорошей
+                    статьи</a> про
+                flex-grow.
+            </p>
+
+            <p>
+                И это ещё не всё. Можно управлять не только расширением, но и сжатием элементов.
+                Для этого используется
+                свойство<br> <span class="text__accent-padding">flex-shrink</span>. Это полная
+                противоположность свойству <span class="text__accent-padding">flex-grow</span>.
+            </p>
+
+            <p>
+                Значением <span class="text__accent-padding">flex-shrink</span> может быть любое
+                положительное целое число. Отрицательные значения игнорируются.
+                По умолчанию его значение <span class="text__accent-padding">1</span> — то есть все
+                элементы сжимаются с одинаковой скоростью. Чем больше значение
+                <span class="text__accent-padding">flex-shrink</span>, тем быстрее сжимается элемент.
+            </p>
+
+            <p>
+                Задайте первой карточке <span class="text__accent-padding">flex-shrink: 3</span>.
+            </p>
+
+            <!-- 03 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/13_lesson/03_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/13_lesson/03_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Карточка, которой вы переопределили значение <span class="text__accent-padding">flex-shrink: 3</span>,
+                сжалась гораздо сильнее, чем её соседи.
+            </p>
+
+            <p>
+                Понять математику и увидеть формулы можно в
+                <a class="external__link"
+                    href="https://scribe.rip/@stasonmars/%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-flex-shrink-%D0%B2-css-%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%BE%D0%B5-%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-c41e40767194"
+                    target="_blank">этой статье.</a>
+            </p>
+
+            <p>
+                Положительные значения рассмотрели, но не разобрались с нулём. Элементы, у которых
+                установлено свойство
+                <span class="text__accent-padding">flex-shrink: 0</span>, не сжимаются. Их размер не
+                может стать меньше, чем тот, что задан с помощью
+                <span class="text__accent-padding">flex-basis</span>.
+            </p>
+
+            <p>
+                Чтобы убедиться в этом, установите второй карточке
+                <span class="text__accent-padding">flex-shrink: 0</span>.
+            </p>
+
+            <!-- 04 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/13_lesson/04_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/13_lesson/04_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Да, <span class="text__accent-padding">flex-basis</span>,
+                <span class="text__accent-padding">flex-shrink</span> и
+                <span class="text__accent-padding">flex-grow</span> всегда рядом друг с другом.
+                Так что вместо трёх свойств даже можно использовать одно —
+                <span class="text__accent-padding">flex</span>. Да,
+                <span class="text__accent-padding">flex-basis</span>,
+                <span class="text__accent-padding">flex-shrink</span> и
+                <span class="text__accent-padding">flex-grow</span>
+                всегда рядом друг с другом. Так
+                что вместо трёх свойств даже можно использовать одно —
+                <span class="text__accent-padding">flex</span>.
+            </p>
+
+            <p>
+                Значение по умолчанию — flex: 0 1 auto. Расшифровывается это так:
+            </p>
+
 
             <!---------- DEMO CODE ---------->
             <pre class="code__example-block">
                 <code>
-                код
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: auto;
                 </code>
             </pre>
 
-            <!---------- VIDEO ---------->
-            <video width="640" height="360" controls>
-                <source src="/video/01_sprint/04_theme/01_lesson/Скринридер_1.mp4" type="video/mp4">
-            </video>
-
-            <!---------- IMAGE ---------->
-            <img src="/images/01_sprint/01_theme/01_lesson/01_image.png" alt="">
-
-
+            <p>
+                Теперь вы знаете о флексбоксе достаточно, чтобы пользоваться им осознанно. Осталось закрепить новые
+                знания практикой.
+            </p>
 
         </div><!--main__wrapper-1-->
     </div><!--main-->

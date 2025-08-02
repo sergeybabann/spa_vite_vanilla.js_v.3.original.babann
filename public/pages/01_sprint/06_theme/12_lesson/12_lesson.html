@@ -16,38 +16,45 @@
         <div class="main__wrapper-1">
             <h1 class="main__title-1">12. Свойства флекс-элементов. Выравнивание отдельного элемента</h1>
             <p>
-
+                Флексбокс позволяет задать контекст с едиными правилами поведения для всех элементов,
+                которые находятся внутри контейнера. Это даёт порядок. Но иногда порядок приходится
+                нарушать — например, задавать отдельным элементам поведение, которое отличается от общего.
             </p>
 
-
-
+            <p>
+                Давайте сразу на практике. Добавьте элементу
+                <span class="text__accent-padding">.day__mood</span> правило
+                <span class="text__accent-padding">align-self: center;</span> и посмотрите, как
+                изменится положение эмодзи.
+            </p>
 
 
             <!-- 01 RUN CODE -->
             <div class="run__code-block">
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code/index.html"
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/12_lesson/01_run_code/index.html"
                     target="_blank" rel="noopener noreferrer">Запустить код</a>
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code.zip" download>скачать
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/12_lesson/01_run_code.zip" download>скачать
                     блок кода</a>
             </div>
 
-            <!---------- DEMO CODE ---------->
-            <pre class="code__example-block">
-                <code>
-                код
-                </code>
-            </pre>
+            <p>
+                Контекст флекс-контейнера <span class="text__accent-padding">.day</span> требует, чтобы
+                все элементы выравнивались по началу поперечной оси. За
+                это отвечает свойство <span class="text__accent-padding">align-items: flex-start</span>.
+                Но блок с эмодзи нарушает это правило, потому что вы дали
+                ему особое поручение — расположиться по центру поперечной оси.
+            </p>
 
-            <!---------- VIDEO ---------->
-            <video width="640" height="360" controls>
-                <source src="/video/01_sprint/04_theme/01_lesson/Скринридер_1.mp4" type="video/mp4">
-            </video>
+            <p>
+                Свойство <span class="text__accent-padding">align-self</span>
+                применяется к флекс-элементам и принимает те же значения, что и
+                <span class="text__accent-padding">align-items</span>.
+            </p>
 
-            <!---------- IMAGE ---------->
-            <img src="/images/01_sprint/01_theme/01_lesson/01_image.png" alt="">
-
-
-
+            <p>
+                Общий контекст для всех элементов — это удобно. Но иногда правила нужно нарушать, чтобы получить
+                интересный результат.
+            </p>
         </div><!--main__wrapper-1-->
     </div><!--main-->
 </div><!--margin__main-->

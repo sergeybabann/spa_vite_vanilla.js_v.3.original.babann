@@ -15,39 +15,114 @@
     <div class="main">
         <div class="main__wrapper-1">
             <h1 class="main__title-1">11. Свойства флекс-элементов. Порядок</h1>
-            <p>
 
+
+            <p>
+                Флексбокс помогает навести порядок на странице. По крайней мере, визуально.
             </p>
 
+            <p>
+                Флексбокс помогает навести порядок на странице. По крайней мере, визуально.
+            </p>
 
-
-
+            <p>
+                Сомнений снежный ком<br>
+                Несётся к нам из прошлого…<br>
+                Не думай о плохом,<br>
+                А помни про хорошее.
+            </p>
 
             <!-- 01 RUN CODE -->
             <div class="run__code-block">
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code/index.html"
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/11_lesson/01_run_code/index.html"
                     target="_blank" rel="noopener noreferrer">Запустить код</a>
-                <a class="run__code-link" href="/pages/01_sprint/00_theme/00_lesson/01_run_code.zip" download>скачать
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/11_lesson/01_run_code.zip" download>скачать
                     блок кода</a>
             </div>
 
-            <!---------- DEMO CODE ---------->
-            <pre class="code__example-block">
-                <code>
-                код
-                </code>
-            </pre>
+            <p>
+                Нет, так не получится. Есть ещё одна небольшая проблема — у вас нет доступа к HTML. Можно менять только
+                стили элементов.
+            </p>
 
-            <!---------- VIDEO ---------->
-            <video width="640" height="360" controls>
-                <source src="/video/01_sprint/04_theme/01_lesson/Скринридер_1.mp4" type="video/mp4">
-            </video>
+            <p>
+                Уберём ненужный саспенс. Во флексбокс-вёрстке вы можете менять порядок элементов, не трогая ни HTML-код,
+                ни CSS-правило для контейнера. В правила тех элементов, чей порядок следования нужно переопределить,
+                просто дописываем свойство <span class="text__accent-padding">order</span>.
+            </p>
 
-            <!---------- IMAGE ---------->
-            <img src="/images/01_sprint/01_theme/01_lesson/01_image.png" alt="">
+            <p>
+                Добавьте элементу <span class="text__accent-padding">.banner_second</span>
+                свойство <span class="text__accent-padding">order</span> со значением
+                <span class="text__accent-padding">1</span> и посмотрите, как изменится
+                порядок:
+            </p>
+
+            <!-- 02 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/11_lesson/02_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/11_lesson/02_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
+
+            <p>
+                Поставьте 2, 10, 100 — разницы нет, можно указать любые целые числа. Элементы встают в
+                порядке возрастания значения <span class="text__accent-padding">order</span>. По умолчанию
+                у всех <span class="text__accent-padding">order: 0</span>.
+                Измените <span class="text__accent-padding">0</span> на <span class="text__accent-padding">1</span>
+                — элемент переместится в самый конец.
+            </p>
+
+            <p>
+                Отрицательные значения тоже работают. Например, элемент с
+                <span class="text__accent-padding">order: -1;</span> будет первым в контейнере, если у
+                других элементов значения положительные или не заданы явно.
+            </p>
+
+            <p>
+                Проверьте сами.
+            </p>
+
+            <!-- 03 RUN CODE -->
+            <div class="run__code-block">
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/11_lesson/03_run_code/index.html"
+                    target="_blank" rel="noopener noreferrer">Запустить код</a>
+                <a class="run__code-link" href="/pages/01_sprint/06_theme/11_lesson/03_run_code.zip" download>скачать
+                    блок кода</a>
+            </div>
 
 
+            <p>
+                Теперь вы управляете не правилами контекста, а задаёте правила поведения для конкретных
+                элементов. Но свойством <span class="text__accent-padding">order</span> не стоит
+                злоупотреблять. Когда вы используете его, порядок элементов меняется только
+                визуально. В HTML он остаётся прежним.
+            </p>
 
+            <p>
+                Это легко проверить с помощью скринридера. Если вы запустите его, то услышите, как тот бодро перечисляет
+                содержимое блоков в изначальном порядке. Поэтому старайтесь менять порядок элементов в разметке, если
+                такая возможность доступна.
+            </p>
+
+            <p>
+                Мы пытались вспомнить, где <span class="text__accent-padding">order</span> пригождается в реальной
+                жизни. Получились такие варианты:
+            </p>
+
+            <ul>
+                <li>Когда в админке можно управлять только стилями. Например, так бывает на сайтах, сделанных на
+                    WordPress, где можно менять правила CSS через плагины.</li>
+                <li>Когда в мобильной версии сайта нужно перестроить порядок отображения элементов, и не имеет значения,
+                    как это повлияет на скринридер.</li>
+                <li>При реализации дизайнерских решений, рассчитанных исключительно на зрячих пользователей.</li>
+            </ul>
+
+            <p>
+                Если вы встречались с другими ситуациями — расскажите про них куратору. Есть шанс попасть в этот урок в
+                качестве автора.
+            </p>
         </div><!--main__wrapper-1-->
     </div><!--main-->
 </div><!--margin__main-->

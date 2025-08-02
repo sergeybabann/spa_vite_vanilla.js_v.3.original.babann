@@ -7,13 +7,10 @@ html {
 }
 
 body {
-  min-width: 1100px;
-
-  /*
-  1. Превратите во флекс-контейнер.
-  2. Установите направление column.
-  3. Добавьте минимальную высоту 100%.
-  */
+  display: flex;
+  flex-direction: column;
+  min-width: 850px;
+  min-height: 100%;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
@@ -42,21 +39,25 @@ h2 {
 
 .main {
   display: flex;
-
-  /* Добавьте flex-grow */
+  flex-grow: 1;
+  justify-content: center;
 }
 
 .content {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   gap: 25px;
   width: 100%;
+  max-width: 1200px;
   padding: 15px;
 }
 
 .card {
-  width: 300px;
+  /* Задайте размер карточки с помощью flex-basis */
+
+  /* Задайте flex-grow со значением 1 */
+
   min-height: 200px;
   border: 2px solid #000;
   text-align: center;
