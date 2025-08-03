@@ -115,6 +115,22 @@ const routes = {
   '/sprint_01/theme_06/lesson_14': () =>
     import('../pages/sprint_01/06_theme/14_lesson.js'),
 
+  /*---------- 07 THEME ----------*/
+  '/sprint_01/theme_07': () =>
+    import('../pages/sprint_01/sprint_01__theme_07.js'),
+
+  /*------------ LESSONS ----------*/
+  '/sprint_01/theme_07/lesson_01': () =>
+    import('../pages/sprint_01/07_theme/01_lesson.js'),
+
+  /*---------- 08 THEME ----------*/
+  '/sprint_01/theme_08': () =>
+    import('../pages/sprint_01/sprint_01__theme_08.js'),
+
+  /*------------ LESSONS ----------*/
+  '/sprint_01/theme_08/lesson_01': () =>
+    import('../pages/sprint_01/08_theme/01_lesson.js'),
+
   // /*------------------------------ 02 SPRINT ------------------------------*/
   // '/sprint_02': () => import('../pages/sprint_02/sprint_02.js'),
 
