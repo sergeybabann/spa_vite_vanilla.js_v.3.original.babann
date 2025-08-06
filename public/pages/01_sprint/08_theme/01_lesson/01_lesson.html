@@ -37,6 +37,353 @@
                 объясняет, как эффективнее всего работать над проектом. Это ценный опыт для вашего будущего
                 трудоустройства.
             </div>
+
+            <p>Чтобы получить максимум опыта, рекомендуем двигаться так:</p>
+
+            <ol>
+                <li>Ознакомиться с предложенным <a class="external__link"
+                        href="https://www.figma.com/design/nX9s9ebdGmPN3THsl8DJxi/-1-%D0%A1-%D1%87%D0%B8%D1%81%D1%82%D0%BE%D0%B3%D0%BE-%D0%BB%D0%B8%D1%81%D1%82%D0%B0--Copy-?node-id=0-1&t=76rozKAXnRs74AlO-0"
+                        target="_blank">макетом</a>.</li>
+                <li>Опираться на рекомендации по вёрстке макета из этого урока. Они пригодятся, когда будете смотреть
+                    видеоразбор — по структуре и оформлению они совпадают с теми, что встретятся вам в проекте в конце
+                    этого спринта.</li>
+                <li>Просмотреть чек-лист в следующем уроке. Он поможет расставить акценты при просмотре видео.</li>
+                <li>Перейти к <a class="external__link"
+                        href="https://disk.yandex.ru/client/disk/IT/IT%20Learn/Tutorial/Yandex%20Practicum/01-sprint_08-theme_01-lesson/video%231"
+                        target="_blank">видеоразбору</a>
+                    в последнем уроке темы.</li>
+                <li>Ответить на парочку вопросов после видео.</li>
+            </ol>
+
+            <h class="main__title-3">Базовая настройка проекта</h>
+
+            <p>
+                Вы получили <a class="external__link"
+                    href="https://disk.yandex.ru/client/disk/IT/IT%20Learn/Tutorial/Yandex%20Practicum/01-sprint_08-theme_01-lesson/%D0%B7%D0%B0%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0"
+                    target="_blank">файл с заготовкой проекта</a>. Изображения
+                и шрифты лежат в соответствующих папках.
+            </p>
+
+            <p>
+                Почти все проекты по вёрстке начинаются одинаково — с создания необходимых файлов и связывания их друг с
+                другом. Создайте индексный HTML-файл и файл стилей в папке <span
+                    class="text__accent-padding">styles</span>. Назовите файл стилей
+                <span class="text__accent-padding">style.css</span>. Это
+                поможет автотестам при сдаче проекта работать корректно.
+            </p>
+
+            <p>
+                Затем создайте внутри папки <span class="text__accent-padding">fonts</span> файл
+                <span class="text__accent-padding">fonts.css</span>. В нём настройте все шрифты во всех форматах. Вам
+                понадобятся такие шрифты:
+            </p>
+
+            <ul>
+                <li><span class="text__accent-padding">EB Garamond</span> со значениями толщины
+                    <span class="text__accent-padding">500</span> (файлы с именами <span
+                        class="text__accent-padding">ebgaramondmedium</span>) и
+                    <span class="text__accent-padding">400</span> (файлы с
+                    именами <span class="text__accent-padding">ebgaramondregular</span>).
+                </li>
+                <li><span class="text__accent-padding">Inter</span> со значениями толщины
+                    <span class="text__accent-padding">400</span> (файлы с именами
+                    <span class="text__accent-padding">interregular</span>) и
+                    <span class="text__accent-padding">700</span> (файлы с именами
+                    <span class="text__accent-padding">interbold</span>).
+                </li>
+            </ul>
+
+            <p>
+                Создайте базовую структуру HTML-страницы и подключите ссылки на файлы стилей: сначала на файл со стилями
+                шрифтов, затем — на файл со стилями проекта.
+            </p>
+
+            <p>
+                Ваша страница будет написана на русском языке, поэтому в атрибуте
+                <span class="text__accent-padding">lang</span> укажите значение
+                <span class="text__accent-padding">ru</span>. Ещё
+                поменяйте <span class="text__accent-padding">title</span>.
+                Рекомендуем такой — <span class="text__accent-padding">С чистого листа</span>.
+            </p>
+
+            <h class="main__title-3">Сбросьте стили, которые помешают в будущем</h>
+
+            <p>
+                Браузерные отступы вам не понадобятся. Предлагаем сбросить их на элементах, которые встречаются чаще
+                других.
+            </p>
+
+            <p>
+                Некоторые верстальщики не любят сбрасывать стили глобально и писать аналоги
+                <span class="text__accent-padding">reset.css</span>, но в проекте мы
+                это сделаем, чтобы меньше думать о браузерах и больше о дизайне.
+            </p>
+
+            <p>
+                Установите значение <span class="text__accent-padding">0</span>:
+            </p>
+
+            <ol>
+                <li>Свойству <span class="text__accent-padding">margin</span> для
+                    <span class="text__accent-padding">body</span>;
+                </li>
+                <li>Свойствам <span class="text__accent-padding">margin</span>
+                    и <span class="text__accent-padding">padding</span> для
+                    <span class="text__accent-padding">h1, h2, h3, h4, h5, h6, p, ul, ol,</span>
+                    <span class="text__accent-padding">blockquote</span> — можете взять такой селектор.
+                </li>
+            </ol>
+
+            <p>
+                Ещё вы можете задать <span class="text__accent-padding">body</span> фон, чтобы отличать
+                его от мобильной страницы. Мы выбрали фон <span class="text__accent-padding">#1e1e1e</span>,
+                вы можете выбрать свой.
+            </p>
+
+            <h class="main__title-3">
+                Найдите паттерны и опишите их
+            </h>
+
+            <p>
+                Посмотрите на <a class="external__link"
+                    href="https://www.figma.com/design/nX9s9ebdGmPN3THsl8DJxi/-1-%D0%A1-%D1%87%D0%B8%D1%81%D1%82%D0%BE%D0%B3%D0%BE-%D0%BB%D0%B8%D1%81%D1%82%D0%B0--Copy-?node-id=0-1&p=f&t=aHGbRKDwRgsyITZy-0"
+                    target="_blank">макет</a>
+                и найдите повторяющиеся детали.
+            </p>
+
+            <p>
+                Вначале это непросто, но с опытом такое умение приходит. В этом проекте мы подскажем.
+            </p>
+
+            <ol>
+                <li>На странице два шрифта. По объёму текста сильно преобладает
+                    <span class="text__accent-padding">Inter</span> с толщиной
+                    <span class="text__accent-padding">400</span>. Можно смело назначить его как основной шрифт страницы
+                    для всего тела документа. Сделайте это. Уникальные шрифты
+                    будем добавлять каждому конкретному элементу. Не забывайте указывать альтернативный шрифт в
+                    дополнение к основному.
+                </li>
+                <li>
+                    Страница состоит из шести секций: шапки, четырёх секций с контентом и подвала. Четыре секции с
+                    контентом можно считать основной зоной сайта. Вы можете написать семантическую HTML-разметку для
+                    перечисленных зон. Используйте теги
+                    <span class="text__accent-padding">header</span>,
+                    <span class="text__accent-padding">main</span>,
+                    <span class="text__accent-padding">section</span> и
+                    <span class="text__accent-padding">footer</span>.
+                </li>
+            </ol>
+
+            <img src="/images/01_sprint/08_theme/01_lesson/01_image.png" alt="">
+
+            <li>
+                Все секции одинаковой ширины — 360 пикселей. Ещё их стоит выровнять по горизонтальному
+                центру, чтобы было удобнее смотреть. У них будут внутренние отступы, поэтому можно
+                изменить
+                <span class="text__accent-padding">box-sizing</span>, чтобы не раздувать блоки отступами.
+                Создайте в CSS селектор по классу
+                <span class="text__accent-padding">content-section</span>, опишите в нём правила ширины,
+                автоматические поля и определите
+                <span class="text__accent-padding">box-sizing</span>. Этот класс можно присвоить всем
+                элементам в HTML, кроме <span class="text__accent-padding">main</span>.
+            </li>
+
+            <li>
+                Есть два вида секций: с чёрным фоном и белым шрифтом, с жёлтым фоном и чёрным шрифтом.
+                Можем создать два класса-модификатора:
+                <span class="text__accent-padding">content-section_theme_dark</span> под первый вид и
+                <span class="text__accent-padding">content-section_theme_bright</span> под второй вид
+                (имена не случайны: чёрный там не совсем чёрный, а жёлтый — не самый жёлтый).
+                Этим модификаторам можно задать правила фона и цвета текста.
+                Чтобы увидеть изменения на странице, можно задать секциям любую высоту,
+                например 100 пикселей, и потом её убрать. Расставьте эти классы нужным блокам в HTML и
+                посмотрите на результат.
+            </li>
+
+            <img src="/images/01_sprint/08_theme/01_lesson/02_image.png" alt="">
+
+            <p>Получилась такая заготовка. Кажется, можно наполнять секции элементами.</p>
+
+            <h class="main__title-3">Дайте секциям уникальные имена и настройте внутренние отступы</h>
+
+            <p>
+                Каждая из секций чем-то уникальна, поэтому полезно использовать классы, которые
+                подчеркнут это и определят персональные стили секций. Мы назвали их так:
+                <span class="text__accent-padding">header</span>;
+                секции
+                <span class="text__accent-padding">cover</span>,
+                <span class="text__accent-padding">intro</span>,
+                <span class="text__accent-padding">reasons</span> и
+                <span class="text__accent-padding">how-to</span>;
+                <span class="text__accent-padding">footer</span>.
+                Названия отражают содержание секций.
+            </p>
+
+            <p>
+                Через уникальные имена удобно задавать внутренние отступы. Хотя в их размерах и
+                можно найти общие закономерности, пусть каждая секция отдельно управляет своим
+                внутренним устройством. Например, для <span class="text__accent-padding">header</span>
+                заданы отступы в 24 пикселя сверху и снизу и по 20 пикселей по бокам.
+            </p>
+
+            <!---------- VIDEO ---------->
+            <video width="640" height="360" controls>
+                <source src="/video/01_sprint/08_theme/01_lesson/video_2.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+
+            <p>
+                Остальные отступы определите и расставьте сами. После этого секции будут видны и без
+                указания высоты:
+            </p>
+
+            <img src="/images/01_sprint/08_theme/01_lesson/03_image.png" alt="">
+
+            <p>Секции уменьшились без правила min-height, но стали видны за счёт отступов</p>
+
+            <div class="main__text-accent">
+                Дальше вам предстоит сверстать содержимое секций. Мы дадим подсказки по
+                особенностям макета, но решения по вёрстке, измерениям, цветам и контенту вам
+                необходимо забирать из Figma самостоятельно. Именно такая практическая работа
+                поможет по-настоящему научиться верстать.
+            </div>
+
+            <h class="main__title-3">
+                Шапка сайта
+            </h>
+
+            <p>
+                В шапке два элемента — логотип и меню. Обычно на внутренних страницах логотип — это
+                ссылка на главную страницу. На главной странице эту ссылку делают неактивной.
+                Чтобы добиться нужного поведения для главной страницы, вложите изображение с логотипом
+                внутрь тега ссылки, но уберите у ссылки атрибут
+                <span class="text__accent-padding">href</span>. Так ссылка станет контейнером
+                без логики перехода.
+            </p>
+
+            <p>
+                Меню лучше оформить семантическим тегом навигации, но внутрь него вложить список.
+                Это поможет скринридеру рассказать людям с особенностями зрения, сколько всего ссылок
+                в меню и какая находится в фокусе (про фокус ещё расскажем). Не забывайте также указывать
+                <span class="text__accent-padding">alt</span>
+                для изображений.
+            </p>
+
+            <p>
+                Задайте отдельный класс для выделения активной ссылки. Чтобы страница не перезагружалась
+                по клику на ссылку, присвойте атрибуту
+                <span class="text__accent-padding">href</span> значение
+                <span class="text__accent-padding">#0</span> (лайфхак с несуществующим идентификатором).
+            </p>
+
+            <p>
+                Рекомендуемые имена классов:
+            </p>
+
+            <ul>
+                <li><span class="text__accent-padding">header__logo</span> — ссылка-логотип;</li>
+                <li><span class="text__accent-padding">header__logo-image</span> — картинка логотипа;</li>
+                <li><span class="text__accent-padding">header__menu</span> — контейнер с меню;</li>
+                <li><span class="text__accent-padding">header__menu-list</span>— список пунктов меню;</li>
+                <li><span class="text__accent-padding">header__menu-item</span> — пункт меню;</li>
+                <li><span class="text__accent-padding">header__menu-item_active</span>— активный пункт меню;</li>
+                <li><span class="text__accent-padding">header__menu-link</span>— ссылка в пункте меню.</li>
+            </ul>
+
+            <p>
+                Все остальные решения о стилизации принимать вам. Главное, чтобы страница совпадала с макетом.
+            </p>
+
+            <h class="main__title-3">
+                Секция cover
+            </h>
+
+            <p>
+                В HTML достаточно добавить один элемент — заголовок первого уровня. Внутри него нужно
+                разбить текст на три строки. Это лучше сделать, заключив контент каждой строки в
+                отдельный тег <span class="text__accent-padding">span</span>.
+            </p>
+
+            <p>
+                По правилам вложенности внутрь заголовка нельзя положить, например, абзац.
+                А вот строчный <span class="text__accent-padding">span</span> вкладывать можно.
+                Проверяйте правила вложенности с помощью
+                сервиса <a class="external__link" href="https://caninclude.onrender.com/" target="_blank">CAN I
+                    INCLUDE</a>.
+            </p>
+
+            <p>
+                Чтобы каждый <span class="text__accent-padding">span</span> оказался на своей строке,
+                достаточно сделать его блочным через свойство
+                <span class="text__accent-padding">display</span>.
+            </p>
+
+            <p>
+                Выравнивание внутри строк удобно разметить отдельными классами, которые пригодятся для
+                такого же выравнивания в других заголовках (в статьях есть выравнивание по правому краю).
+            </p>
+
+            <p>
+                Изображение нужно разместить на фоне блока <span class="text__accent-padding">cover</span>.
+                Поэкспериментируйте со свойствами
+                <span class="text__accent-padding">background-repeat</span>,
+                <span class="text__accent-padding">background-size</span>,
+                <span class="text__accent-padding">background-position</span>, чтобы расположить фон как на картинке.
+                Попробуйте, например, указать размер фона в <span class="text__accent-padding">95% auto</span>.
+                Блоку<span class="text__accent-padding">cover</span> задайте минимальную высоту, чтобы он не
+                схлопывался.
+            </p>
+
+            <p>
+                Рекомендуемые имена классов:
+            </p>
+
+            <ul>
+                <li><span class="text__accent-padding">cover__title</span>— заголовок;</li>
+                <li><span class="text__accent-padding">accent-span</span> — все строки;</li>
+                <li><span class="text__accent-padding">text-center</span>— строка с выравниванием текста по центру;</li>
+                <li><span class="text__accent-padding">text-right</span>— строка с выравниванием текста по правому краю.
+                </li>
+            </ul>
+
+            <h class="main__title-3">
+                Секция intro
+            </h>
+
+            <p>
+                Вам понадобятся два контейнера — один для всех элементов заголовка статьи, другой — для основного
+                текста.
+            </p>
+
+            <p>
+                Для указания даты публикации используйте семантический тег
+                <span class="text__accent-padding">time</span>. Подробнее о нём
+                <a class="external__link" href="https://doka.guide/html/time/">почитайте на Доке.</a> Даты
+                обычно не переносят между строками, используйте для этого
+                <span class="text__accent-padding">white-space: nowrap;</span>.
+            </p>
+
+            <p>
+                В контейнере для текста не забывайте размечать содержимое абзацами. Не используйте перенос строк, когда
+                абзацы разные.
+            </p>
+
+            <p>
+                Как обычно, поработайте с флексами, шрифтами, цветами и отступами.
+            </p>
+
+            <p>
+                Рекомендуемые имена классов:
+            </p>
+
+            <ul>
+                <li><span class="text__accent-padding">intro__heading</span> — контейнер для элементов заголовка;</li>
+                <li><span class="text__accent-padding">intro__title</span>— заголовок;</li>
+                <li><span class="text__accent-padding">intro__date</span> — дата публикации;</li>
+                <li><span class="text__accent-padding">intro__main-text</span>— контейнер для текста.</li>
+            </ul>
+
+
         </div><!--main__wrapper-1-->
     </div><!--main-->
 </div><!--margin__main-->
