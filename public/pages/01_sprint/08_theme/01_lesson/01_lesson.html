@@ -387,7 +387,135 @@
                 Секция reasons
             </h>
 
+            <p>
+                Для выравнивания строк в заголовке удобно использовать те же классы и приёмы, что в
+                секции <span class="text__accent-padding">cover</span>.
+            </p>
 
+            <p>
+                Внутри пункта списка нужен дополнительный <span class="text__accent-padding">span</span>,
+                чтобы выделить ключевые слова жирным начертанием.
+            </p>
+
+            <p>
+                Для заголовка используйте тег, описывающий корректную структуру: это всё одна статья,
+                заголовок в секции <span class="text__accent-padding">reasons</span> должен быть ниже
+                уровнем, чем в секции <span class="text__accent-padding">intro</span>.
+            </p>
+
+            <p>
+                Когда будете верстать список, подумайте, как можно избежать лишнего отступа у последнего
+                пункта (если используете нижние поля) или у первого (если верхние). Сейчас вы можете это
+                сделать только через <span class="text__accent-padding">flex</span>, но скоро изучите другие, более
+                популярные приёмы.
+            </p>
+
+            <h class="main__title-3">Рекомендуемые имена классов:</h>
+
+            <ul>
+                <li><span class="text__accent-padding">content-section__subtitle</span> — заголовок;</li>
+                <li><span class="text__accent-padding">accent-span</span>,
+                    <span class="text__accent-padding">text-right</span>
+                    — знакомы вам по секции
+                    <span class="text__accent-padding">cover</span>;
+                </li>
+                <li><span class="text__accent-padding">content-section__introduction</span>— абзац перед списком;</li>
+                <li><span class="text__accent-padding">content-section__list</span>— список;</li>
+                <li><span class="text__accent-padding">content-section__list-item</span>— пункт списка;</li>
+                <li><span class="text__accent-padding">content-section__list-accent</span>
+                    — выделенный жирным начертанием текст внутри списка.</li>
+            </ul>
+
+            <h class="main__title-3">
+                Секция how-to
+            </h>
+
+            <p>
+                Эта секция большая, но есть хорошие новости. Два элемента вы уже верстали:
+            </p>
+
+            <!---------- IMAGE ---------->
+            <img src="/images/01_sprint/08_theme/01_lesson/04_image.png" alt="">
+
+            <p>
+                Они одинаковые, отличаются только тексты и цвет, который наследуется от темы секции
+            </p>
+
+            <p>
+                Вы можете взять эти элементы из прошлой секции, заменив контент внутри. А вот над списком карточек
+                придётся потрудиться. Читайте буквально — это список карточек.
+            </p>
+
+            <p>
+                Для карточки используйте тег <span class="text__accent-padding">article</span>, вложенный в пункт
+                списка.
+            </p>
+
+            <p>
+                Карточки двух видов — серые и жёлтые. Для каждого из них полезно создать по два класса:
+                один для общих стилей, второй — для цветовых модификаций. Общие стили описывайте в классе
+                <span class="text__accent-padding">card</span>, а стили для цветовых
+                модификаций — классам
+                <span class="text__accent-padding">card_theme_dark</span> и
+                <span class="text__accent-padding">card_theme_bright</span> соответственно.
+            </p>
+
+            <p>
+                Вам потребуется два контейнера внутри карточки — под элементы, связанные с автором высказывания в
+                карточке, и под текст внутри карточки. Нужно всё сделать так, чтобы можно было убрать первый контейнер и
+                ничего не сломать. Внутри жёлтой карточки нет информации об авторе.
+            </p>
+
+            <p>
+                Внутри контейнера с информацией об авторе два элемента — изображение и имя автора, а внутри контейнера с
+                текстом — заголовок и текст. Если абзацев несколько, обычно создают дополнительный контейнер-обёртку.
+            </p>
+
+            <p>
+                Присмотритесь к отступам. Когда в карточке нет картинки, у заголовка нет верхнего отступа. Для таких
+                случаев можно использовать дополнительный класс, обозначающий карточку без фото и вложенный селектор для
+                выбора заголовка в ней.
+            </p>
+
+            <h class="main__title-3">Рекомендуемые имена классов:</h>
+
+            <ul>
+                <li><span class="text__accent-padding">content-section__subtitle</span>,
+                    <span class="text__accent-padding">accent-span</span>,
+                    <span class="text__accent-padding">text-right</span>,
+                    <span class="text__accent-padding">content-section__introduction</span>
+                    — эти классы вам уже знакомы;
+                </li>
+                <li><span class="text__accent-padding">cards-list</span>— список карточек;</li>
+                <li><span class="text__accent-padding">card</span>— карточка;</li>
+                <li><span class="text__accent-padding">card_text-only</span>— карточка без фото;</li>
+                <li><span class="text__accent-padding">card_theme_dark</span>,
+                    <span class="text__accent-padding">card_theme_bright</span>
+                    — цветовые модификаторы карточек;
+                </li>
+                <li><span class="text__accent-padding">card__author</span>— контейнер с информацией об авторе;</li>
+                <li><span class="text__accent-padding">card__author-photo</span>— фото автора;</li>
+                <li><span class="text__accent-padding">card__author-name</span>— имя автора;</li>
+                <li><span class="text__accent-padding">card__content</span>— контейнер для контента карточки;</li>
+                <li><span class="text__accent-padding">card__title</span>— заголовок перед текстом карточки;</li>
+                <li><span class="text__accent-padding">card__text</span>— контейнер для текста карточки.</li>
+            </ul>
+
+            <h class="main__title-3">Подвал сайта</h>
+
+            <p>
+                В подвале сайта два элемента — абзац с копирайтом и список ссылок. После всего свёрстанного выше вы
+                легко с ним справитесь.
+            </p>
+
+            <p>
+                Рекомендуемые имена классов:
+            </p>
+
+            <ul>
+                <li><span class="text__accent-padding">footer__copy</span>— блок с копирайтом;</li>
+                <li><span class="text__accent-padding">footer__links</span>— список ссылок.</li>
+            </ul>
         </div><!--main__wrapper-1-->
     </div><!--main-->
 </div><!--margin__main-->
